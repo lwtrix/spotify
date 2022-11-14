@@ -190,8 +190,36 @@ a:hover {
 
 .player-controls {
     display: flex;
-    align-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
 
+}
+
+.player-buttons{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.5em;
+    letter-spacing: 20px;
+}
+
+#music-bar{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+}
+
+#music-progress{
+    display: flex;
+    height: 5px;
+    width: 700px;
+    background-color: white;
+    border-radius: 50px;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    display: none;
 }
 
 .list-container {
@@ -206,6 +234,7 @@ a:hover {
     display: flex;
     color: white;
     margin-right: 20px;
+    align-items: center;
 }
 
 input {
@@ -216,6 +245,7 @@ input {
     border-radius: 8px;
     transition: 0.2s ease;
     background-color: #5e5e5e;
+    margin-right: 15px;
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -334,3 +364,13 @@ table {
     color: var(--sand);
     border-spacing: 30px 0px;
   }
+
+.album-small{
+    width: 50px;
+    height: 50px;
+}
+
+.album-medium{
+    width: 100px;
+    height: 100px;
+}
