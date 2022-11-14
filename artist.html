@@ -8,7 +8,9 @@
     <title>Spotify</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;600&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="artist.css">
     <script src="https://kit.fontawesome.com/cce91a75ea.js" crossorigin="anonymous"></script>
 </head>
@@ -19,10 +21,35 @@
     </div>
 
     <div class="music-player">
+        <div class="album-details">
+            <img class="album-artwork" src="https://upload.wikimedia.org/wikipedia/en/2/27/Daft_Punk_-_Discovery.png">
+            <div class="album-text">
+                <h4>One More Time</h4>
+                <h5>Daft Punk</h5>
+            </div>
+        </div>
+
+        <div class="player-controls">
+            <div class="player-buttons">
+                <button type="button"><i class="fa-solid fa-shuffle"></i></button>
+                <button type="button"><i class="fa-solid fa-backward-step"></i></button>
+                <button type="button"><i class="fa-regular fa-circle-pause"></i></button>
+                <button type="button"><i class="fa-solid fa-forward-step"></i></button>
+                <button type="button"><i class="fa-solid fa-repeat"></i></button>
+            </div>
+            <div class="music-bar">
+                
+            </div>
+        </div>
+
+        <div class="media-controls">
+            <i class="fa-solid fa-volume-high"></i>
+            <input id="volume" type="range">
+        </div>
     </div>
-    
+
     <div class="main-container">
-        
+
         <div class="artist-container">
             <div class="topbar">
                 <div class="prev-next-buttons">
@@ -42,6 +69,12 @@
                 <h5><img id="verified" src="./verified.png"> Verified Artist</h5>
                 <h1>Daft Punk</h1>
                 <h4>30,000,000 monthly listeners</h4>
+            </div>
+            <div class="list-container">
+                <div class="list-top-bar">
+                </div>
+                <div class="list">
+                </div>
             </div>
         </div>
     </div>
