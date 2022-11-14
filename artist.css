@@ -197,7 +197,10 @@ a:hover {
 }
 
 .list-container{
-    background: white;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.3) 20%, var(--black) 80%);
+    height: 500px;
 }
 
 
@@ -221,12 +224,65 @@ input {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: green;
+    background-color: var(--green);
   }
   
   input[type="range"]:hover {
-    background: green;
+    background: var(--green);
   }
   input[type="range"]::-webkit-slider-thumb:hover {
     background-color: white;
   }
+
+.list-top-bar{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-left: 20px;
+    height: 100px;
+}
+
+  #green-circle{
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    background-color: var(--green);
+    border-radius: 100%;
+    position: relative;
+  }
+
+  /* #green-circle::before{
+    position: absolute;
+    content: "||";
+    width: 100px;
+    height: 100px;
+    top: 45%;
+    right: -45%;
+    
+  } */
+
+
+.list-main{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.list-list{
+    flex-grow: 1;
+}
+
+
+table {
+    color: white;
+}
+
+.right-side{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 300px;
+    text-align: left;
+}
