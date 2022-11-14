@@ -17,6 +17,7 @@
 
 
 body{
+    color: white;
     height: 100%;
     background-color: var(--black);
     font-family: 'Signika', sans-serif;
@@ -237,9 +238,11 @@ input {
 .list-top-bar{
     display: flex;
     flex-direction: row;
-    margin-top: 10px;
-    margin-left: 20px;
+    margin-top: 30px;
+    margin-left: 30px;
     height: 100px;
+    line-height: 100px;
+    align-items: center;
 }
 
   #green-circle{
@@ -249,6 +252,7 @@ input {
     background-color: var(--green);
     border-radius: 100%;
     position: relative;
+    margin-right: 40px;
   }
 
   /* #green-circle::before{
@@ -261,6 +265,23 @@ input {
     
   } */
 
+#follow-btn{
+    background: none;
+    border: 1px solid rgba(255,255,255, 0.4);
+    border-radius: 5px;
+    height: 30px;
+    width: 80px;
+    color: white;
+    margin-right: 30px;
+}
+
+#dot-btn{
+    background: none;
+    border: none;
+    color: white;
+    letter-spacing: 5px;
+    font-size: 0.5em;
+}
 
 .list-main{
     display: flex;
