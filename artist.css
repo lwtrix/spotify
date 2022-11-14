@@ -1,4 +1,4 @@
-:root{
+:root {
     --green: rgb(30, 215, 96);
     --light-black: rgb(40, 40, 40);
     --black: rgb(24, 24, 24);
@@ -9,14 +9,16 @@
     --blue: #4688d7;
 }
 
-*, *::before, *::after{
+*,
+*::before,
+*::after {
     padding: 0;
     margin: 0;
 }
 
 
 
-body{
+body {
     color: white;
     height: 100%;
     background-color: var(--black);
@@ -31,7 +33,7 @@ a:hover {
     color: var(--sand);
 }
 
-.sidebar-placeholder{
+.sidebar-placeholder {
     position: fixed;
     left: 0;
     background-color: black;
@@ -45,12 +47,12 @@ a:hover {
     width: 160px;
 }
 
-.main-container{
+.main-container {
     margin-left: 245px;
     margin-bottom: 100px;
 }
 
-.topbar{
+.topbar {
     display: flex;
     justify-content: space-between;
     padding: 14px 30px;
@@ -100,11 +102,11 @@ a:hover {
 }
 
 .topbar .navbar ul li.divider {
-  color: #ffffff;
-  font-size: 26px;
-  margin: 0px 20px;
-  width: auto;
-  user-select: none;
+    color: #ffffff;
+    font-size: 26px;
+    margin: 0px 20px;
+    width: auto;
+    user-select: none;
 }
 
 .topbar .navbar button {
@@ -119,23 +121,18 @@ a:hover {
     margin-left: 20px;
 }
 
-.topbar .navbar button:hover,
-.topbar .navbar button:active,
-.topbar .navbar button:focus {
-}
-
-.artist-container{
+.artist-container {
     display: flex;
     flex-direction: column;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0)),
-    url(https://cdn.britannica.com/89/181289-050-427762A2/Thomas-Bangalter-Guy-Manuel-de-Homem-Christo-Daft-Punk-2013.jpg);
+        url(https://cdn.britannica.com/89/181289-050-427762A2/Thomas-Bangalter-Guy-Manuel-de-Homem-Christo-Daft-Punk-2013.jpg);
     background-size: cover;
     background-position-y: 30%;
     height: 350px;
     position: relative;
 }
 
-.artist-text-container{
+.artist-text-container {
     color: white;
     position: absolute;
     bottom: 0;
@@ -155,7 +152,7 @@ a:hover {
     letter-spacing: 2px;
 }
 
-.music-player{
+.music-player {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -168,7 +165,7 @@ a:hover {
     border-top: 1px solid var(--dark-grey)
 }
 
-.album-details{
+.album-details {
     margin: 10px;
     margin-left: 15px;
     display: flex;
@@ -176,7 +173,7 @@ a:hover {
 
 }
 
-.album-text{
+.album-text {
     color: white;
     font-size: 0.8em;
     font-weight: 300;
@@ -186,26 +183,26 @@ a:hover {
     letter-spacing: 1px;
 }
 
-.album-artwork{
+.album-artwork {
     width: 60px;
     height: 60px;
 }
 
-.player-controls{
+.player-controls {
     display: flex;
     align-content: space-evenly;
 
 }
 
-.list-container{
+.list-container {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.3) 20%, var(--black) 80%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 20%, var(--black) 80%);
     height: 500px;
 }
 
 
-.media-controls{
+.media-controls {
     display: flex;
     color: white;
     margin-right: 20px;
@@ -219,23 +216,25 @@ input {
     border-radius: 8px;
     transition: 0.2s ease;
     background-color: #5e5e5e;
-  }
-  input[type="range"]::-webkit-slider-thumb {
+}
+
+input[type="range"]::-webkit-slider-thumb {
     /* display: none; */
     width: 12px;
     height: 12px;
     border-radius: 50%;
     background-color: var(--green);
-  }
-  
-  input[type="range"]:hover {
-    background: var(--green);
-  }
-  input[type="range"]::-webkit-slider-thumb:hover {
-    background-color: white;
-  }
+}
 
-.list-top-bar{
+input[type="range"]:hover {
+    background: var(--green);
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    background-color: white;
+}
+
+.list-top-bar {
     display: flex;
     flex-direction: row;
     margin-top: 30px;
@@ -245,7 +244,9 @@ input {
     align-items: center;
 }
 
-  #green-circle{
+#green-circle {
+    display: flex;
+    align-items: center;
     width: 80px;
     height: 80px;
     margin: 5px;
@@ -253,21 +254,29 @@ input {
     border-radius: 100%;
     position: relative;
     margin-right: 40px;
-  }
+}
 
-  /* #green-circle::before{
-    position: absolute;
-    content: "||";
-    width: 100px;
-    height: 100px;
-    top: 45%;
-    right: -45%;
-    
-  } */
+#green-circle-inner {
+    width: 40px;
+    height: 40px;
+    border-style: solid;
+    border-width: 37px;
+    border-color: #202020;
+    border-style: double;
+    border-width: 0px 39px 0px 39px;
+    border-width: 0px 0px 0px 39px;
+    border-color: #ffffff;
+    margin-left: 20px;
+}
 
-#follow-btn{
+#green-circle:hover,
+#green-circle-inner:hover {
+    cursor: pointer;
+}
+
+#follow-btn {
     background: none;
-    border: 1px solid rgba(255,255,255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 5px;
     height: 30px;
     width: 80px;
@@ -275,7 +284,7 @@ input {
     margin-right: 30px;
 }
 
-#dot-btn{
+#dot-btn {
     background: none;
     border: none;
     color: white;
@@ -283,7 +292,11 @@ input {
     font-size: 0.5em;
 }
 
-.list-main{
+button:hover {
+    cursor: pointer;
+}
+
+.list-main {
     display: flex;
     flex-direction: row;
     margin-top: 50px;
@@ -291,19 +304,33 @@ input {
     margin-right: 30px;
 }
 
-.list-list{
-    flex-grow: 1;
+.list-list {
+    flex-grow: 2;
 }
 
 
 table {
     color: white;
+    min-width: 1200px;
 }
 
-.right-side{
+.right-side {
     display: flex;
     flex-direction: column;
     color: white;
-    width: 300px;
+    width: 500px;
     text-align: left;
 }
+
+.big-spacing{
+    width: 600px;
+}
+
+#heading-text{
+    margin-bottom: 20px;
+}
+
+table {
+    color: var(--sand);
+    border-spacing: 30px 0px;
+  }
