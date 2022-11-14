@@ -1,0 +1,288 @@
+:root{
+    --green: rgb(30, 215, 96);
+    --light-black: rgb(40, 40, 40);
+    --black: rgb(24, 24, 24);
+    --dark-grey: rgb(54, 54, 54);
+    --grey: rgb(170, 170, 170);
+    --sand: rgb(200, 200, 200);
+    --white: rgb(255, 255, 255);
+    --blue: #4688d7;
+}
+
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+body{
+    height: 100%;
+    background-color: var(--black);
+    font-family: 'Signika', sans-serif;
+}
+
+a {
+    color: var(--grey);
+}
+
+a:hover {
+    color: var(--sand);
+}
+
+.sidebar-placeholder{
+    position: fixed;
+    left: 0;
+    background-color: black;
+    top: 0;
+    bottom: 0;
+    width: 196px;
+    padding: 24px;
+}
+
+.sidebar-placeholder .logo {
+    width: 160px;
+}
+
+.main-container{
+    margin-left: 245px;
+    margin-bottom: 100px;
+}
+
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 30px;
+}
+
+.topbar .prev-next-buttons button {
+    vertical-align: middle;
+    color: var(--grey);
+    cursor: pointer;
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+    font-size: 18px;
+    border: 0px;
+    background-color: black;
+    margin-right: 10px;
+}
+
+.topbar .navbar {
+    display: flex;
+    align-items: center;
+}
+
+.topbar .navbar ul {
+    list-style: none;
+}
+
+.topbar .navbar ul li {
+    display: inline-block;
+    margin: 0px 8px;
+    width: 70px;
+}
+
+.topbar .navbar ul li a {
+    color: var(--sand);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.topbar .navbar ul li a:hover,
+.topbar .navbar ul li a:active,
+.topbar .navbar ul li a:focus {
+    color: white;
+    font-size: 15px;
+}
+
+.topbar .navbar ul li.divider {
+  color: #ffffff;
+  font-size: 26px;
+  margin: 0px 20px;
+  width: auto;
+  user-select: none;
+}
+
+.topbar .navbar button {
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px 30px;
+    border: 0px;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.topbar .navbar button:hover,
+.topbar .navbar button:active,
+.topbar .navbar button:focus {
+}
+
+.artist-container{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0)),
+    url(https://cdn.britannica.com/89/181289-050-427762A2/Thomas-Bangalter-Guy-Manuel-de-Homem-Christo-Daft-Punk-2013.jpg);
+    background-size: cover;
+    background-position-y: 30%;
+    height: 350px;
+    position: relative;
+}
+
+.artist-text-container{
+    color: white;
+    position: absolute;
+    bottom: 0;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+.artist-text-container h1 {
+    font-size: 5em;
+    font-weight: 600;
+}
+
+#verified {
+    line-height: 30px;
+    height: 30px;
+    vertical-align: middle;
+    letter-spacing: 2px;
+}
+
+.music-player{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 80px;
+    z-index: 1;
+    background-color: var(--black);
+    border-top: 1px solid var(--dark-grey)
+}
+
+.album-details{
+    margin: 10px;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.album-text{
+    color: white;
+    font-size: 0.8em;
+    font-weight: 300;
+    margin-top: 10px;
+    line-height: 20px;
+    margin-left: 8px;
+    letter-spacing: 1px;
+}
+
+.album-artwork{
+    width: 60px;
+    height: 60px;
+}
+
+.player-controls{
+    display: flex;
+    align-content: space-evenly;
+
+}
+
+.list-container{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.3) 20%, var(--black) 80%);
+    height: 500px;
+}
+
+
+.media-controls{
+    display: flex;
+    color: white;
+    margin-right: 20px;
+}
+
+input {
+    height: 4px;
+    appearance: none;
+    width: 100%;
+    margin: 2px;
+    border-radius: 8px;
+    transition: 0.2s ease;
+    background-color: #5e5e5e;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    /* display: none; */
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--green);
+  }
+  
+  input[type="range"]:hover {
+    background: var(--green);
+  }
+  input[type="range"]::-webkit-slider-thumb:hover {
+    background-color: white;
+  }
+
+.list-top-bar{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-left: 20px;
+    height: 100px;
+}
+
+  #green-circle{
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    background-color: var(--green);
+    border-radius: 100%;
+    position: relative;
+  }
+
+  /* #green-circle::before{
+    position: absolute;
+    content: "||";
+    width: 100px;
+    height: 100px;
+    top: 45%;
+    right: -45%;
+    
+  } */
+
+
+.list-main{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.list-list{
+    flex-grow: 1;
+}
+
+
+table {
+    color: white;
+}
+
+.right-side{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 300px;
+    text-align: left;
+}
