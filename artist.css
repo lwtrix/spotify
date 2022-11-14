@@ -226,7 +226,8 @@ a:hover {
     display: flex;
     flex-direction: column;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 20%, var(--black) 80%);
-    height: 500px;
+    height: fit-content;
+    overflow-y: auto;
 }
 
 
@@ -286,7 +287,13 @@ input[type="range"]::-webkit-slider-thumb:hover {
     margin-right: 40px;
 }
 
-#green-circle-inner {
+#green-circle-inner{
+    color: var(--black);
+    font-size: 3em;
+    margin: 0 auto;
+}
+
+/* #green-circle-inner {
     width: 40px;
     height: 40px;
     border-style: solid;
@@ -297,7 +304,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
     border-width: 0px 0px 0px 39px;
     border-color: #ffffff;
     margin-left: 20px;
-}
+} */
 
 #green-circle:hover,
 #green-circle-inner:hover {
@@ -312,14 +319,23 @@ input[type="range"]::-webkit-slider-thumb:hover {
     width: 80px;
     color: white;
     margin-right: 30px;
+    font-weight: bold;
+}
+
+#follow-btn:hover{
+    border: 1px solid white;
 }
 
 #dot-btn {
     background: none;
     border: none;
-    color: white;
+    color: rgba(255, 255, 255, 0.4);
     letter-spacing: 5px;
     font-size: 0.5em;
+}
+
+#dot-btn:hover{
+    color: white;
 }
 
 button:hover {
@@ -329,8 +345,8 @@ button:hover {
 .list-main {
     display: flex;
     flex-direction: row;
-    margin-top: 50px;
-    margin-left: 30px;
+    margin-top: 20px;
+    margin-left: 35px;
     margin-right: 30px;
 }
 
@@ -339,16 +355,11 @@ button:hover {
 }
 
 
-table {
-    color: white;
-    min-width: 1200px;
-}
-
 .right-side {
     display: flex;
     flex-direction: column;
     color: white;
-    width: 500px;
+    width: 700px;
     text-align: left;
 }
 
@@ -362,7 +373,7 @@ table {
 
 table {
     color: var(--sand);
-    border-spacing: 30px 0px;
+    border-spacing: 40px 0px;
   }
 
 .album-small{
@@ -373,4 +384,37 @@ table {
 .album-medium{
     width: 100px;
     height: 100px;
+}
+
+.artist-pick-con{
+    display: flex;
+    margin-top: 20px;
+}
+
+.artist-pick-text{
+    margin-left: 20px;
+}
+
+.artist-pick-text > h5 {
+    color: var(--grey);
+}
+
+.posted-by{
+    display: flex;
+    flex-direction: row;
+    line-height: 30px;
+}
+
+.posted-by > h6 {
+    color: var(--grey);
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+#circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-image: url(https://i.scdn.co/image/ab6761610000517496d66c60658005885d1135ce);
+    background-size: cover;
 }
