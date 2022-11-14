@@ -127,7 +127,7 @@ a:hover {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0)),
         url(https://cdn.britannica.com/89/181289-050-427762A2/Thomas-Bangalter-Guy-Manuel-de-Homem-Christo-Daft-Punk-2013.jpg);
     background-size: cover;
-    background-position-y: 30%;
+    background-position-y: 20%;
     height: 350px;
     position: relative;
 }
@@ -141,6 +141,8 @@ a:hover {
 }
 
 .artist-text-container h1 {
+    filter: invert(0);
+    mix-blend-mode: difference;
     font-size: 5em;
     font-weight: 600;
 }
@@ -159,7 +161,7 @@ a:hover {
     position: fixed;
     bottom: 0;
     width: 100vw;
-    height: 80px;
+    height: 90px;
     z-index: 1;
     background-color: var(--black);
     border-top: 1px solid var(--dark-grey)
@@ -188,44 +190,50 @@ a:hover {
     height: 60px;
 }
 
-.player-controls {
+.bar-container{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-
+    line-height: 5px;
 }
 
-.player-buttons{
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    align-items: center;
-    font-size: 1.5em;
+#time-remain{
+    margin-right: 10px;
+    font-size: 0.8em;
+}
+
+#time-total{
+    margin-left: 10px;
+    font-size: 0.8em;
+}
+
+.control-buttons{
+    font-size: 2em;
+    margin-bottom: 15px;
     letter-spacing: 20px;
 }
 
-#music-bar{
+.player-controls{
     display: flex;
-    flex-direction: row;
-    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-#music-progress{
-    display: flex;
+.small-btn{
+    font-size: 0.5em;
+}
+
+.music-bar{
+    width: 800px;
     height: 5px;
-    width: 700px;
+    border-radius: 10px;
     background-color: white;
-    border-radius: 50px;
-    position: absolute;
-    left: 50%;
-    right: 50%;
-    display: none;
+    margin-bottom: 5px; 
 }
 
 .list-container {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 20%, var(--black) 80%);
+    background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, rgba(24,24,24,1) 90%);
     height: fit-content;
     overflow-y: auto;
 }
