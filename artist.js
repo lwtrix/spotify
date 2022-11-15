@@ -5,8 +5,12 @@ const artistContainer = document.getElementById("artist-main")
 const artistCircle = document.getElementById("circle")
 const smallAlbum = document.getElementById("album-small")
 
+const artistId = window.location.search.split('?')[1]
+const searh = new URLSearchParams(artistId)
+const id = searh.get('id')
+
 const loadArtist = () => {
-    fetch("https://striveschool-api.herokuapp.com/api/deezer/artist/14",
+    fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${id}`,
     {
         method: "GET"
     })
