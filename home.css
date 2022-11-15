@@ -13,24 +13,121 @@ body {
 .container {
     width: 1400px;
     margin: 0 auto;
-    background-color: #1a1919;
+    background-color: #1a1919a8;
+    position: relative;
+    height: 100vh;
+}
+
+.container::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(255, 0, 0, 0.582) 10%, rgba(0, 0, 0, 0) 30%);
+    z-index: -10;
+    position: absolute;
+    top: 0;
+}
+
+.top-nav {
+    margin: 0 25px;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation-btns {
+    display: flex;
+}
+
+.navigation-btns .previous,
+.navigation-btns .next {
+    background-color: rgba(0, 0, 0, 0.616);
+    border-radius: 50%;
+    position: relative;
+    width: 10px;
+    height: 10px;
+    margin-right: 20px;
+    padding: 18px;
+}
+
+.navigation-btns .previous img,
+.navigation-btns .next img { 
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 80%;
+    height: auto;
+}
+
+.navigation-btns .previous img {
+    left: -10%;
+}
+
+.navigation-btns .next img {
+    right: -10%;
+}
+
+.account-info {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    background-color: rgba(0, 0, 0, 0.616);
+    border-radius: 20px;
+    padding: 3px 0;
+}
+
+.account-info .img-container {
+    width: 25px;
+    position: relative;
+    height: 25px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: 2px;
+}
+
+.account-info .img-container img {
+    width: 200%;
+    position: absolute;
+    left: -50%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.account-info .account-name {
+    margin-left: 10px;
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
 }
 
 .welcome-tracks {
     margin: 0 25px;
-    margin-top: 60px;
+    margin-top: 25px;
+}
+
+.welcome-tracks h1 {
+    font-size: 32px;
+    font-weight: 700;
 }
 
 .track-pills {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .track-pill {
     width: 18.5%;
-    height: 80px;
+    height: 70px;
     display: flex;
     background-color: rgba(255, 255, 255, 0.082);
     align-items: center;
@@ -40,7 +137,7 @@ body {
 }
 
 .track-pill .img-container {
-    width: 35%;
+    width: 30%;
     height: 100%;
     overflow: hidden;
     position: relative;
@@ -64,19 +161,37 @@ body {
     font-weight: 500;
 }
 
-.albums-row {
-    margin: 0 25px;
-    margin-top: 35px;
-}
-
+.albums-row,
 .tracks-row {
     margin: 0 25px;
     margin-top: 35px;
 }
 
+.albums-row h2,
+.tracks-row h2 {
+    font-weight: 700;
+}
+
+.tracks-row .sub-heading {
+    color: #ccc;
+    margin-top: 5px;
+}
+
 .cards-container {
     display: flex;
-    margin-top: 15px;
+    padding-top: 15px;
+    position: relative;
+}
+
+.cards-container .see-all {
+    position: absolute;
+    top: -10%;
+    right: 1%;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #ccc;
+    letter-spacing: 1px;
+    cursor: pointer;
 }
 
 .card {
@@ -89,6 +204,8 @@ body {
     border-radius: 5px;
     margin-right: 15px;
 }
+
+
 
 .card .img-container {
     width: 100%;
@@ -119,6 +236,12 @@ body {
 .card .card-details .artist {
     margin-top: 5px;
     color: #ccc;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.card .card-details .artist:hover {
+    color: #21cd5d;
 }
 
 
