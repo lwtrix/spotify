@@ -22,7 +22,7 @@ body {
     color: white;
     height: 100%;
     background-color: var(--black);
-    font-family: 'Signika', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -34,6 +34,8 @@ a:hover {
 }
 
 .sidebar-placeholder {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     left: 0;
     background-color: black;
