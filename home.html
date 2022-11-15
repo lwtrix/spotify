@@ -14,8 +14,20 @@
     <div class="container">
 
         <div class="top-nav">
-            <div class="navigation-btns"></div>
-            <div class="account-info"></div>
+            <div class="navigation-btns">
+                <div class="previous">
+                    <img src="./assets/chevron-left.svg" alt="">
+                </div>
+                <div class="next">
+                    <img src="./assets/chevron-right.svg" alt="">
+                </div>
+            </div>
+            <div class="account-info">
+                <div class="img-container">
+                    <img src="./assets/profile.jpg" alt="">
+                </div>
+                <span class="account-name">Tyler Swan Marshall</span>
+            </div>
         </div>
 
         <div class="welcome-tracks">
@@ -108,6 +120,7 @@
         <div class="albums-row ">
             <h2>Recommended Albums</h2>
             <div class="cards-container">
+                    <span class="see-all">See All</span>
                 <div class="card">
                     <div class="img-container">
                         <img src="https://e-cdns-images.dzcdn.net/images/cover/7df7ac6028591a5622f24cf32a555510/250x250-000000-80-0-0.jpg" alt="">
@@ -184,8 +197,10 @@
         </div>
 
         <div class="tracks-row">
-            <h2>This Week's Tracks</h2>
+            <h2>Top Listened Tracks</h2>
+            <p class="sub-heading">Discover some of the highest rated artists.</p>
             <div class="cards-container">
+                <span class="see-all">See All</span>
                 <div class="card">
                     <div class="img-container">
                         <img src="https://e-cdns-images.dzcdn.net/images/artist/5d2fa7f140a6bdc2c864c3465a61fc71/250x250-000000-80-0-0.jpg" alt="">
@@ -263,5 +278,7 @@
         </div>
 
     </div>
+
+    <script src="home.js"></script>
 </body>
 </html>
