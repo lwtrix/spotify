@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="artist.css">
+    <script src="https://kit.fontawesome.com/cce91a75ea.js" crossorigin="anonymous"></script>
+    <script src="./artist.js" defer></script>
+</head>
+
+<body>
+    <div class="sidebar-placeholder">
+        <img class="logo" src="./spotify-logo.png">
+
+
+    </div>
+
+    <div class="music-player">
+        <div class="album-details">
+            <img class="album-artwork" src="https://upload.wikimedia.org/wikipedia/en/2/27/Daft_Punk_-_Discovery.png">
+            <div class="album-text">
+                <h4>One More Time</h4>
+                <h5>Daft Punk</h5>
+            </div>
+        </div>
+
+        <div class="player-controls">
+           <div class="control-buttons">
+            <i class="fa-solid fa-shuffle small-btn"></i>
+            <i class="fa-solid fa-backward-step small-btn"></i>
+            <i class="fa-regular fa-circle-pause"></i>
+            <i class="fa-solid fa-forward-step small-btn"></i>
+            <i class="fa-solid fa-repeat small-btn"></i>
+           </div>
+           <div class="bar-container">
+            <span id="time-remain">0:00</span>
+           <div class="music-bar"></div>
+           <span id="time-total">0:00</span>
+           </div>
+        </div>
+
+        <div class="media-controls">
+            <i class="fa-solid fa-volume-high"></i>
+            <input id="volume" type="range">
+        </div>
+    </div>
+
+    <div class="main-container">
+
+        <div id="artist-main" class="artist-container">
+            <div class="topbar">
+                <div class="prev-next-buttons">
+                    <button type="button" class="fa fas fa-chevron-left"></button>
+                    <button type="button" class="fa fas fa-chevron-right"></button>
+                </div>
+
+                <div class="navbar">
+                    <ul>
+                        <!-- <li class="divider">|</li> -->
+                        <li><a href="#">Sign Up</a></li>
+                    </ul>
+                    <button type="button">Log In</button>
+                </div>
+            </div>
+            <div class="artist-text-container">
+                <h5><img id="verified" src="./verified.png"> Verified Artist</h5>
+                <h1 id="artist-name">Daft Punk</h1>
+                <h4>30,000,000 monthly listeners</h4>
+            </div>
+        </div>
+        <div class="list-container">
+            <div class="list-top-bar">
+                <div id="green-circle">
+                    <div id="green-circle-inner">
+                        <i class="fa-solid fa-pause"></i>
+                    </div>
+                </div>
+                <button type="button" id="follow-btn">FOLLOW</button>
+                <button type="button" id="dot-btn"><i class="fa-solid fa-circle"></i><i
+                        class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i></button>
+            </div>
+            <div class="list-main">
+                <div class="list-list">
+                    <h2 id="heading-text">Popular</h2>
+                    <table class="table">
+                        <tr>
+                            <td>1</td>
+                            <td><img class="album-artwork album-small"
+                                    src="https://upload.wikimedia.org/wikipedia/en/2/27/Daft_Punk_-_Discovery.png"></td>
+                            <td class="big-spacing">One More Time</td>
+                            <td class="big-spacing">452,837,562</td>
+                            <td class="big-spacing">5:20</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><img class="album-artwork album-small"
+                                    src="https://upload.wikimedia.org/wikipedia/en/2/27/Daft_Punk_-_Discovery.png"></td>
+                            <td>One More Time</td>
+                            <td>452,837,562</td>
+                            <td>5:20</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><img class="album-artwork album-small"
+                                    src="https://upload.wikimedia.org/wikipedia/en/2/27/Daft_Punk_-_Discovery.png"></td>
+                            <td>One More Time</td>
+                            <td>452,837,562</td>
+                            <td>5:20</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><img class="album-artwork album-small"
+                                    src="https://upload.wikimedia.org/wikipedia/en/2/27/Daft_Punk_-_Discovery.png"></td>
+                            <td>One More Time</td>
+                            <td>452,837,562</td>
+                            <td>5:20</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><img class="album-artwork album-small"
+                                    src="https://upload.wikimedia.org/wikipedia/en/2/27/Daft_Punk_-_Discovery.png"></td>
+                            <td>One More Time</td>
+                            <td>452,837,562</td>
+                            <td>5:20</td>
+                        </tr>
+
+                    </table>
+                </div>
+                <div class="right-side">
+                    <h2>Artist Pick</h2>
+                    <div class="artist-pick-con">
+                        <img id="album-small" class="album-artwork album-medium"
+                            src="https://i.scdn.co/image/ab6761610000517496d66c60658005885d1135ce">
+                        <div class="artist-pick-text">
+                            <div class="posted-by">
+                                <div id="circle"></div>
+                                <h6>Posted by <span id="posted-by-artist">Daft Punk</span></h6>
+                            </div>
+                            <h4><span id="artist-name-play">Daft Punk Essentials</span></h4>
+                            <h5>Playlist</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
