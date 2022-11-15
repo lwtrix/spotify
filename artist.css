@@ -128,7 +128,7 @@ a:hover {
         url(https://cdn.britannica.com/89/181289-050-427762A2/Thomas-Bangalter-Guy-Manuel-de-Homem-Christo-Daft-Punk-2013.jpg);
     background-size: cover;
     background-position-y: 20%;
-    height: 350px;
+    height: 390px;
     position: relative;
 }
 
@@ -233,7 +233,7 @@ a:hover {
 .list-container {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, rgba(24,24,24,1) 90%);
+    background: linear-gradient(180deg, rgba(98, 0, 255, 0.1) 5%, rgba(24,24,24,1));
     height: fit-content;
     overflow-y: auto;
 }
@@ -259,9 +259,9 @@ input {
 
 input[type="range"]::-webkit-slider-thumb {
     /* display: none; */
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
     background-color: var(--green);
 }
 
@@ -367,7 +367,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     color: white;
-    width: 700px;
+    width: 500px;
     text-align: left;
 }
 
@@ -425,4 +425,22 @@ table {
     border-radius: 100%;
     background-image: url(https://i.scdn.co/image/ab6761610000517496d66c60658005885d1135ce);
     background-size: cover;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    letter-spacing: 20px;
+    color: var(--grey);
+}
+
+.media-controls{
+    letter-spacing: 10px;
+    font-size: 0.8em;
+    color: var(--grey);
+}
+
+.icons >i:hover, .media-controls > i:hover{
+    color: white;
 }
