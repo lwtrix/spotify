@@ -15,14 +15,15 @@ body {
     margin: 0 auto;
     background-color: #1a1919a8;
     position: relative;
-    height: 100vh;
+    height: fit-content;
+    padding-bottom: 40px;
 }
 
 .container::after {
     content: '';
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(rgba(255, 0, 0, 0.582) 10%, rgba(0, 0, 0, 0) 30%);
+    background-image: linear-gradient(rgba(255, 0, 0, 0.582) 10%, #1a1919a8 30%);
     z-index: -10;
     position: absolute;
     top: 0;
@@ -231,13 +232,23 @@ body {
 .card .card-details {
     margin-top: 20px;
     width: 100%;
+    text-transform: capitalize;
+}
+
+.card .card-details .title {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .card .card-details .artist {
     margin-top: 5px;
+    display: block;
     color: #ccc;
     cursor: pointer;
     transition: .2s;
+    text-decoration: none;
 }
 
 .card .card-details .artist:hover {
