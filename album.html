@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="album.css" />
+    <title>Album</title>
+  </head>
+  <body>
+    <div class="container-fluid d-flex justify-content-between m-0 p-0">
+      <div class="nav-container pl-5 pr-3 p-0 col-2">
+        <a href="#"><img src="logo.jpeg" height="60px" alt="" /></a>
+
+        <div id="home" class="nav-list mb-3 mt-4">
+          <div class="d-flex align-items-center">
+            <iconify-icon icon="ic:baseline-home" width="24"></iconify-icon>
+            <span class="home ml-3">Home</span>
+          </div>
+        </div>
+        <div id="search" class="nav-list mb-3">
+          <div class="d-flex align-items-center">
+            <iconify-icon
+              icon="material-symbols:search"
+              width="24"
+            ></iconify-icon>
+            <span class="search ml-3">Search</span>
+          </div>
+        </div>
+        <div id="library" class="nav-list mb-5">
+          <div class="d-flex align-items-center">
+            <iconify-icon icon="bx:library" width="24"></iconify-icon>
+            <span class="home ml-3">Your Library</span>
+          </div>
+        </div>
+        <div id="add-playlist" class="nav-list mb-3">
+          <div class="d-flex align-items-center">
+            <iconify-icon
+              icon="mdi:plus-box"
+              style="color: white"
+              width="24"
+            ></iconify-icon>
+            <span class="home ml-3">Create Playlist</span>
+          </div>
+        </div>
+        <div id="liked-songs" class="nav-list mb-3">
+          <div class="d-flex align-items-center">
+            <iconify-icon
+              icon="mdi:heart-box"
+              style="color: rgb(74, 74, 183)"
+              width="24"
+            ></iconify-icon>
+            <span class="home ml-3">Liked Songs</span>
+          </div>
+        </div>
+        <hr />
+        <p class="side-bar-songs">Louis Gadza 2022</p>
+        <p class="side-bar-songs">Louis Gadza Nombulelo Ndebele2022</p>
+        <p class="side-bar-songs">Louis Gadza 2022</p>
+        <p class="side-bar-songs">Louis Gadza 2022</p>
+        <p class="side-bar-songs">Louis Gadza 2022</p>
+        <p class="side-bar-songs">Louis Gadza 2022</p>
+
+        <!-- nav -->
+        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="logo.jpeg"></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#"
+                  >Home <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button
+                class="btn btn-outline-success my-2 my-sm-0"
+                type="submit"
+              >
+                Search
+              </button>
+            </form>
+          </div>
+        </nav> -->
+        <!-- nav -->
+      </div>
+      <div class="container w-80 col-10 m-0 p-0">
+        <div
+          class="next d-flex align-items-center justify-content-between pt-2 pl-3"
+        >
+          <div class="d-flex">
+            <div class="next-arrow mr-3">
+              <iconify-icon
+                icon="ic:baseline-keyboard-arrow-left"
+                width="30"
+              ></iconify-icon>
+            </div>
+            <div class="back-arrow">
+              <iconify-icon
+                icon="ic:baseline-keyboard-arrow-right"
+                width="30"
+              ></iconify-icon>
+            </div>
+          </div>
+          <div class="d-flex align-items-center profile-background mr-3">
+            <img
+              class="profil-picture ml-1"
+              src="/Zion_(Official_Album_Cover)_by_Hillsong_United.png"
+              alt=""
+            />
+            <span class="profile-name mx-1">Louis Gadza profile-name</span>
+            <span
+              ><iconify-icon
+                icon="ic:outline-arrow-drop-down"
+                width="20"
+              ></iconify-icon
+            ></span>
+          </div>
+        </div>
+        <div class="album-cover p-3">
+          <div class="album-cover-info d-flex justify-content-start mt-3">
+            <img
+              src="Zion_(Official_Album_Cover)_by_Hillsong_United.png"
+              alt="Tribal"
+              class="img-fluid image-cover"
+            />
+            <div class="cover-info ml-4 mt-auto">
+              <span>ALBUM</span>
+              <h2>Hillsong United</h2>
+              <div
+                class="song-info d-flex justify-content-end align-items-center"
+              >
+                <img src="tribal.jpeg" alt="" class="album-profile-img" />
+                <span><h6>Queen</h6> </span>
+                <span class="year">. 2018.</span>
+
+                <span class="year">18 songs</span>
+                <span class="year">, 1 hr 30min</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="play-bar">
+          <div class="songs p-3">
+            <div class="play d-flex justify-content-start align-items-center">
+              <div
+                class="play-container d-flex justify-content-center align-items-center"
+              >
+                <div class="triangle"></div>
+              </div>
+              <div class="favourate mx-4">
+                <iconify-icon
+                  icon="mdi:cards-heart-outline"
+                  width="20"
+                  height="20"
+                ></iconify-icon>
+              </div>
+              <div class="menu-settings mb-3"><h3>...</h3></div>
+            </div>
+          </div>
+          <div class="songs-list mb-0 pb-0 mx-3">
+            <div
+              class="songs-list-bar d-flex justify-content-between pr-4 pl-2 mr-4"
+            >
+              <span># TITLE</span>
+              <span
+                ><iconify-icon
+                  icon="material-symbols:nest-clock-farsight-analog-outline-rounded"
+                  width="20"
+                ></iconify-icon
+              ></span>
+            </div>
+            <hr />
+          </div>
+        </div>
+        <div class="track pl-4">
+          <div class="d-flex song-bar-options align-items-center pt-4 mr-4">
+            <span>1</span>
+            <div class="d-flex justify-content-between w-100 pr-5">
+              <div class="d-flex flex-column ml-4">
+                <span class="track-name">20th Century Fox</span>
+                <span>Queen</span>
+              </div>
+              <div>
+                <span>3:45</span>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex song-bar-options align-items-center mt-3 mr-4">
+            <span>1</span>
+            <div class="d-flex justify-content-between w-100 pr-5">
+              <div class="d-flex flex-column ml-4">
+                <span class="track-name">20th Century Fox</span>
+                <span>Queen</span>
+              </div>
+              <div>
+                <span>3:45</span>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex song-bar-options align-items-center mt-3 mr-4">
+            <span>1</span>
+            <div class="d-flex justify-content-between w-100 pr-5">
+              <div class="d-flex flex-column ml-4">
+                <span class="track-name">20th Century Fox</span>
+                <span>Queen</span>
+              </div>
+              <div>
+                <span>3:45</span>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex song-bar-options align-items-center mt-3 mr-4">
+            <span>1</span>
+            <div class="d-flex justify-content-between w-100 pr-5">
+              <div class="d-flex flex-column ml-4">
+                <span class="track-name">20th Century Fox</span>
+                <span>Queen</span>
+              </div>
+              <div>
+                <span>3:45</span>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex song-bar-options align-items-center mt-3 mr-4">
+            <span>1</span>
+            <div class="d-flex justify-content-between w-100 pr-5">
+              <div class="d-flex flex-column ml-4">
+                <span class="track-name">20th Century Fox</span>
+                <span>Queen</span>
+              </div>
+              <div>
+                <span>3:45</span>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex song-bar-options align-items-center mt-3 mr-4">
+            <span>1</span>
+            <div class="d-flex justify-content-between w-100 pr-5">
+              <div class="d-flex flex-column ml-4">
+                <span class="track-name">20th Century Fox</span>
+                <span>Queen</span>
+              </div>
+              <div>
+                <span>3:45</span>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex song-bar-options align-items-center mt-3 mr-4">
+            <span>1</span>
+            <div class="d-flex justify-content-between w-100 pr-5">
+              <div class="d-flex flex-column ml-4">
+                <span class="track-name">20th Century Fox</span>
+                <span>Queen</span>
+              </div>
+              <div>
+                <span>3:45</span>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex song-bar-options align-items-center mt-3 mr-4">
+            <span>1</span>
+            <div class="d-flex justify-content-between w-100 pr-5">
+              <div class="d-flex flex-column ml-4">
+                <span class="track-name">20th Century Fox</span>
+                <span>Queen</span>
+              </div>
+              <div>
+                <span>3:45</span>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex song-bar-options align-items-center mt-3 mr-4">
+            <span>1</span>
+            <div class="d-flex justify-content-between w-100 pr-5">
+              <div class="d-flex flex-column ml-4">
+                <span class="track-name">20th Century Fox</span>
+                <span>Queen</span>
+              </div>
+              <div>
+                <span>3:45</span>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex song-bar-options align-items-center mt-3 mr-4">
+            <span>1</span>
+            <div class="d-flex justify-content-between w-100 pr-5">
+              <div class="d-flex flex-column ml-4">
+                <span class="track-name">20th Century Fox</span>
+                <span>Queen</span>
+              </div>
+              <div>
+                <span>3:45</span>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex song-bar-options align-items-center mt-3 mr-4">
+            <span>1</span>
+            <div class="d-flex justify-content-between w-100 pr-5">
+              <div class="d-flex flex-column ml-4">
+                <span class="track-name">20th Century Fox</span>
+                <span>Queen</span>
+              </div>
+              <div>
+                <span>3:45</span>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex song-bar-options align-items-center mt-3 mr-4">
+            <span>1</span>
+            <div class="d-flex justify-content-between w-100 pr-5">
+              <div class="d-flex flex-column ml-4">
+                <span class="track-name">20th Century Fox</span>
+                <span>Queen</span>
+              </div>
+              <div class="d-flex align-items-center">
+                <span>3:45</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="playing-bottom-bar px-4 d-flex align-items-center justify-content-between"
+    >
+      <div class="p-4 d-flex align-items-center">
+        <img class="playing-cover" src="tribal.jpeg" alt="" />
+        <div class="playing-song-name p-4">
+          <div class="song-name">Holy Spirit - Hillsong United</div>
+          <div class="album-name">Queen</div>
+        </div>
+        <div>
+          <iconify-icon
+            icon="mdi:cards-heart-outline"
+            width="12"
+            height="12"
+          ></iconify-icon>
+        </div>
+      </div>
+      <div>
+        <div class="px-4 d-flex align-items-center mr-5 justify-content-center">
+          <div class="px-4 ml-5">
+            <iconify-icon icon="fontisto:random" width="12"></iconify-icon>
+          </div>
+          <div class="px-4">
+            <iconify-icon icon="ri:skip-back-fill" width="12"></iconify-icon>
+          </div>
+          <div class="play-triagle">
+            <div class="triangle2"></div>
+          </div>
+          <div class="px-4">
+            <iconify-icon icon="ri:skip-forward-fill" width="12"></iconify-icon>
+          </div>
+          <div class="px-4">
+            <iconify-icon icon="subway:random" width="12"></iconify-icon>
+          </div>
+        </div>
+        <div
+          class="px-4 d-flex align-items-center justify-content-spacebetween"
+        >
+          <span>0:12</span>
+          <div>
+            <div class="progress mx-4">
+              <div
+                class="progress-bar w-75"
+                role="progressbar"
+                aria-valuenow="75"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+          <span>3:30</span>
+        </div>
+      </div>
+      <div class="d-flex align-items-center">
+        <div>
+          <iconify-icon icon="fontisto:play-list" width="12"></iconify-icon>
+        </div>
+        <div class="px-4">
+          <iconify-icon icon="mdi:monitor-speaker" width="12"></iconify-icon>
+        </div>
+        <div>
+          <iconify-icon icon="charm:sound-up" width="12"></iconify-icon>
+        </div>
+        <div>
+          <div class="progress progress2 mx-4">
+            <div
+              class="progress-bar w-75"
+              role="progressbar"
+              aria-valuenow="75"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+    <!-- Script -->
+  </body>
+</html>
