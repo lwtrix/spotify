@@ -14,6 +14,7 @@
 *::after {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 
@@ -43,6 +44,7 @@ a:hover {
     bottom: 0;
     width: 196px;
     padding: 24px;
+    display: none;
 }
 
 .sidebar-placeholder .logo {
@@ -50,8 +52,10 @@ a:hover {
 }
 
 .main-container {
-    margin-left: 245px;
-    margin-bottom: 100px;
+    /* margin-left: 245px;
+    margin-bottom: 100px; */
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .topbar {
@@ -162,7 +166,7 @@ a:hover {
     justify-content: space-between;
     position: fixed;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
     height: 90px;
     z-index: 1;
     background-color: var(--black);
@@ -225,7 +229,8 @@ a:hover {
 }
 
 .music-bar{
-    width: 800px;
+    width: 600px;
+    max-width: 800px;
     height: 5px;
     border-radius: 10px;
     background-color: white;
@@ -278,7 +283,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
 .list-top-bar {
     display: flex;
     flex-direction: row;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-left: 30px;
     height: 100px;
     line-height: 100px;
@@ -288,8 +293,8 @@ input[type="range"]::-webkit-slider-thumb:hover {
 #green-circle {
     display: flex;
     align-items: center;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     margin: 5px;
     background-color: var(--green);
     border-radius: 100%;
@@ -299,7 +304,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
 
 #green-circle-inner{
     color: var(--black);
-    font-size: 3em;
+    font-size: 2em;
     margin: 0 auto;
 }
 
@@ -365,6 +370,7 @@ button:hover {
 }
 
 
+
 .right-side {
     display: flex;
     flex-direction: column;
@@ -385,6 +391,10 @@ table {
     color: var(--sand);
     border-spacing: 40px 0px;
   }
+
+td{
+    width: 200px;
+}
 
 .album-small{
     width: 50px;
@@ -445,4 +455,292 @@ table {
 
 .icons >i:hover, .media-controls > i:hover{
     color: white;
+}
+
+
+
+
+/* media query for small phones */
+@media only screen and (max-width: 600px){
+    .artist-container{
+        height: 310px;
+    }
+    
+    .artist-text-container h1{
+        font-size: 3em;
+    }
+    
+    .topbar .prev-next-buttons button {
+        width: 10px;
+        height: 10px;
+        font-size: 20px;
+        border: 0px;
+        background-color: black;
+        margin-right: 20px;
+    }
+
+    .topbar .navbar button {
+        display: none;
+    }
+
+    .music-player{
+        display: none;
+    }
+
+    .music-player-mobile{
+        display: flex;
+        flex-direction: row;
+        background-color: var(--dark-grey);
+        height: 65px;
+        width: 100vw;
+        border-radius: 15px;
+        position: fixed;
+        bottom: 10px;
+        margin: 0 auto;
+        box-shadow: 0px 10px 10px black;
+    }
+
+    .album-artwork-mob{
+        margin: 10px;
+        border-radius: 5px;
+    }
+
+    .album-details-mob{
+        color: var(--grey);
+        display: flex;
+        flex-direction: column;
+        margin: 14px 5px;
+    }
+
+    .mobile-player-btns{
+        font-size: 1.5em;
+        line-height: 65px;
+        position: fixed;
+        right: 30px;
+        letter-spacing: 10px;
+    }
+
+    .list-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .list-list {
+       display: flex;
+       flex-direction: column;
+       width: 200px;
+    }
+
+    .right-side {
+        display: none;
+    }
+
+    table {
+        font-size: 0.9em;
+        border-spacing: 10px 0px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        table-layout: fixed;
+    }
+
+    .list-top-bar{
+        height: 50px;
+        line-height: 50px;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        flex-direction: row-reverse;
+    }
+
+    #green-circle{
+        margin-left: 40vw;
+        height: 42px;
+        width: 42px;
+    }
+
+    #dot-btn{
+        margin-right: auto;
+        width: 50px;
+    }
+
+    #follow-btn{
+        margin-right: auto;
+    }
+
+}
+/* MQ for portrait tablets and large phones */
+@media only screen and (min-width: 600px){
+    .artist-text-container h1{
+        font-size: 4em;
+    }
+
+    .music-player{
+        display: none;
+    }
+
+    .artist-container{
+        height: 310px;
+    }
+    
+    .artist-text-container h1{
+        font-size: 3em;
+    }
+    
+    .topbar .prev-next-buttons button {
+        width: 10px;
+        height: 10px;
+        font-size: 20px;
+        border: 0px;
+        background-color: black;
+        margin-right: 20px;
+    }
+
+    .topbar .navbar button {
+        display: none;
+    }
+
+    .music-player{
+        display: none;
+    }
+
+    .music-player-mobile{
+        display: flex;
+        flex-direction: row;
+        background-color: var(--dark-grey);
+        height: 65px;
+        width: 100vw;
+        border-radius: 15px;
+        position: fixed;
+        bottom: 10px;
+        margin: 0 auto;
+        box-shadow: 0px 10px 10px black;
+    }
+
+    .album-artwork-mob{
+        margin: 10px;
+        border-radius: 5px;
+    }
+
+    .album-details-mob{
+        color: var(--grey);
+        display: flex;
+        flex-direction: column;
+        margin: 14px 5px;
+    }
+
+    .mobile-player-btns{
+        font-size: 1.5em;
+        line-height: 65px;
+        position: fixed;
+        right: 30px;
+        letter-spacing: 10px;
+    }
+
+    .list-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .list-list {
+       display: flex;
+       flex-direction: column;
+       width: 200px;
+    }
+
+    .right-side {
+        display: none;
+    }
+
+    table {
+        font-size: 0.9em;
+        border-spacing: 10px 0px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        table-layout: fixed;
+    }
+
+    .list-top-bar{
+        height: 50px;
+        line-height: 50px;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        flex-direction: row-reverse;
+    }
+
+    #green-circle{
+        margin-left: 40vw;
+        height: 42px;
+        width: 42px;
+    }
+
+    #dot-btn{
+        margin-right: auto;
+        width: 50px;
+    }
+
+    #follow-btn{
+        margin-right: auto;
+    }
+}
+
+/* MQ for medium devices/landscape tablets */
+@media only screen and (min-width: 600px){
+    .topbar .navbar button {
+        display: inline-block;
+    }
+
+    .list-top-bar {
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+        margin-left: 30px;
+        height: 100px;
+        line-height: 100px;
+        align-items: center;
+    }
+    
+    #green-circle {
+        display: flex;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        margin: 5px;
+        background-color: var(--green);
+        border-radius: 100%;
+        position: relative;
+        margin-right: 40px;
+    }
+    
+    #green-circle-inner{
+        color: var(--black);
+        font-size: 2em;
+        margin: 0 auto;
+    }
+
+    #follow-btn {
+        background: none;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 5px;
+        height: 30px;
+        width: 80px;
+        color: white;
+        margin-right: 30px;
+        font-weight: bold;
+    }
+
+    .right-side{
+        display: flex;
+        width: 300px;
+    }
+}
+
+/* MQ large devices */
+@media only screen and (min-width: 1000px){
+    .music-player{
+        display: flex;
+    }
+
+    .right-side{
+        display: flex;
+        width: 500px;
+    }
 }

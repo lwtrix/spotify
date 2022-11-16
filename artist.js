@@ -10,6 +10,7 @@ const search = new URLSearchParams(artistId)
 let id = search.get('id')
 
 
+
 const loadArtist = () => {
     fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${id}`,
     {
@@ -17,6 +18,7 @@ const loadArtist = () => {
     })
     .then((response) => response.json())
     .then((artist) => {
+        console.table(artist)
         display(artist)
     })
 
@@ -56,7 +58,7 @@ const displayTracks = (tracks) => {
     tracks.forEach((track, index) => {
         let tr = document.createElement("tr")
         tr.innerHTML = `<td>${index + 1}</td>
-        <td style = "width: 200px"><img src="${track.album.cover_small}"></td>
+        <td><img src="${track.album.cover_small}"></td>
         <td style = "width: 400px">${track.title}</td>
         <td >${defineDuration(track.duration)}</td>`
         trackList.appendChild(tr)
@@ -69,7 +71,12 @@ const defineDuration = (t) => {
 
 function play() {
     const playBtn = document.getElementById("green-circle-inner")
-    playBtn.innerHTML = `<i class="fa-solid fa-play"></i>`
+    if (playBtn.innerHTML === `<i class="fa-solid fa-play"></i>` ) {
+        playBtn.innerHTML = `<i class="fa-solid fa-pause"></i>`
+    }
+    else{
+        playBtn.innerHTML = `<i class="fa-solid fa-play"></i>`
+    }
 }
 
 window.onload = () => {
