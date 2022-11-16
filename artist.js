@@ -6,6 +6,7 @@ const artistCircle = document.getElementById("circle")
 const smallAlbum = document.getElementById("album-small")
 const trackList = document.getElementById("track-list")
 const listenerNumber = document.getElementById("listener-num")
+let searchBar = document.getElementById("search-bar")
 const artistId = window.location.search.split('?')[1]
 const search = new URLSearchParams(artistId)
 let id = search.get('id')
@@ -37,12 +38,20 @@ const loadTracks = (artistName) => {
     )
     .then ((response) => response.json())
     .then((response) => {
+        console.log(response)
         displayTracks(response.data)
     })
     .catch((err) => {
         console.error(err)
     })
 }
+
+
+function searchArtist() {
+    let searchQ = searchBar.value
+    loadTracks(searchQ)
+}
+
 
 const randomNumber = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min
@@ -67,7 +76,7 @@ const displayTracks = (tracks) => {
         tr.className = "songs"
         tr.innerHTML = `<td class="audio"><span class="hidden"><i class="bi bi-soundwave"></i></span>${index + 1}</td>
         <td><img src="${track.album.cover_small}"></td>
-        <td style = "width: 400px"><a href="#">${track.title}</a></td>
+        <td style = "width: 400px"><a href="album.html?id=${track.album.id}">${track.title}</a></td>
         <td >${defineDuration(track.duration)}</td>`
         trackList.appendChild(tr)
     })
@@ -92,6 +101,7 @@ function togglePlay (){
     let trs = document.getElementsByClassName("audio")
     
 }
+
 
 window.onload = () => {
     loadArtist(id)

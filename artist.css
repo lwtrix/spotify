@@ -340,6 +340,15 @@ input[type="range"]::-webkit-slider-thumb:hover {
     font-weight: bold;
 }
 
+#search-bar{
+    height: 35px;
+    width: 100px;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid white;
+}
+
 #follow-btn:hover{
     border: 1px solid white;
 }
@@ -395,6 +404,10 @@ table {
     border-spacing: 40px 0px;
     padding-bottom: 100px;
   }
+
+table > td > a:hover{
+    color: var(--green);
+}
 
 td{
     width: 200px;
