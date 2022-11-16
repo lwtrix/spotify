@@ -48,11 +48,9 @@ strong {
   );
   color: white;
   margin-left: 16.5% !important;
-}
-.container {
   width: 100%;
 }
-.image-cover {
+image-cover {
   width: 250px;
   height: 300px;
 }
@@ -217,6 +215,7 @@ a {
   }
   .container {
     width: 100vw;
+    margin-left: 0 !important;
   }
   .next {
     display: none !important;
