@@ -28,6 +28,7 @@ body {
 
 a {
     color: var(--grey);
+    text-decoration: none;
 }
 
 a:hover {
@@ -471,12 +472,16 @@ td{
     }
     
     .topbar .prev-next-buttons button {
-        width: 10px;
-        height: 10px;
-        font-size: 20px;
+        vertical-align: middle;
+        color: var(--grey);
+        cursor: pointer;
+        width: 34px;
+        height: 34px;
+        border-radius: 100%;
+        font-size: 18px;
         border: 0px;
         background-color: black;
-        margin-right: 20px;
+        margin-right: 10px;
     }
 
     .topbar .navbar button {
@@ -686,6 +691,18 @@ td{
 @media only screen and (min-width: 600px){
     .topbar .navbar button {
         display: inline-block;
+    }
+    .topbar .prev-next-buttons button {
+        vertical-align: middle;
+        color: var(--grey);
+        cursor: pointer;
+        width: 34px;
+        height: 34px;
+        border-radius: 100%;
+        font-size: 18px;
+        border: 0px;
+        background-color: black;
+        margin-right: 10px;
     }
 
     .list-top-bar {

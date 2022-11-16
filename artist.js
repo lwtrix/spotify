@@ -59,7 +59,7 @@ const displayTracks = (tracks) => {
         let tr = document.createElement("tr")
         tr.innerHTML = `<td>${index + 1}</td>
         <td><img src="${track.album.cover_small}"></td>
-        <td style = "width: 400px">${track.title}</td>
+        <td style = "width: 400px"><a href="#">${track.title}</a></td>
         <td >${defineDuration(track.duration)}</td>`
         trackList.appendChild(tr)
     })
