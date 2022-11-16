@@ -17,7 +17,9 @@
     box-sizing: border-box;
 }
 
-
+.hidden{
+    display: none;
+}
 
 body {
     color: white;
@@ -242,8 +244,8 @@ a:hover {
     display: flex;
     flex-direction: column;
     background: linear-gradient(180deg, rgba(98, 0, 255, 0.1) 5%, rgba(24,24,24,1));
-    height: fit-content;
     overflow-y: auto;
+    
 }
 
 
@@ -391,6 +393,7 @@ button:hover {
 table {
     color: var(--sand);
     border-spacing: 40px 0px;
+    padding-bottom: 100px;
   }
 
 td{
@@ -658,9 +661,7 @@ td{
     table {
         font-size: 0.9em;
         border-spacing: 10px 0px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        table-layout: fixed;
+        
     }
 
     .list-top-bar{
@@ -684,6 +685,22 @@ td{
 
     #follow-btn{
         margin-right: auto;
+    }
+
+    .right-side-mob{
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+    }  
+
+    .album-mob{
+        height: 40px;
+        width: 40px;
+    }
+
+    .artist-pick-text-mob{
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -746,7 +763,16 @@ td{
 
     .right-side{
         display: flex;
-        width: 300px;
+        width: 200px;
+    }
+
+    #circle{
+        width: 20px;
+        height: 15px;
+    }
+
+    .right-side-mob{
+        display: none;
     }
 }
 
@@ -759,5 +785,14 @@ td{
     .right-side{
         display: flex;
         width: 500px;
+    }
+
+    .artist-text-container h1{
+        font-size: 5em;
+    }
+
+    #circle{
+        width: 30px;
+        height: 30px;
     }
 }

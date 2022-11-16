@@ -5,6 +5,7 @@ const artistContainer = document.getElementById("artist-main")
 const artistCircle = document.getElementById("circle")
 const smallAlbum = document.getElementById("album-small")
 const trackList = document.getElementById("track-list")
+const listenerNumber = document.getElementById("listener-num")
 const artistId = window.location.search.split('?')[1]
 const search = new URLSearchParams(artistId)
 let id = search.get('id')
@@ -43,6 +44,10 @@ const loadTracks = (artistName) => {
     })
 }
 
+const randomNumber = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
 const display = (artist) => {
     console.log(artist)
     artistNameMain.innerText = artist.name
@@ -51,13 +56,16 @@ const display = (artist) => {
     artistContainer.style.backgroundImage = `url(${artist.picture_xl})`
     artistCircle.style.backgroundImage = `url(${artist.picture_small})`
     smallAlbum.src = artist.picture_medium
+    listenerNumber.innerText = randomNumber(100000, 2000000) + " monthly listeners"
     loadTracks(artist.name)
 }
 
 const displayTracks = (tracks) => {
     tracks.forEach((track, index) => {
         let tr = document.createElement("tr")
-        tr.innerHTML = `<td>${index + 1}</td>
+        tr.addEventListener("click", togglePlay)
+        tr.className = "songs"
+        tr.innerHTML = `<td class="audio"><span class="hidden"><i class="bi bi-soundwave"></i></span>${index + 1}</td>
         <td><img src="${track.album.cover_small}"></td>
         <td style = "width: 400px"><a href="#">${track.title}</a></td>
         <td >${defineDuration(track.duration)}</td>`
@@ -77,6 +85,12 @@ function play() {
     else{
         playBtn.innerHTML = `<i class="fa-solid fa-play"></i>`
     }
+}
+
+
+function togglePlay (){
+    let trs = document.getElementsByClassName("audio")
+    
 }
 
 window.onload = () => {
