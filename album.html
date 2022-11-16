@@ -14,14 +14,15 @@
     <title>Album</title>
   </head>
   <body>
-    <div class="container-fluid d-flex justify-content-between m-0 p-0">
+    <div class="container-fluid d-flex justify-content-between m-0 p-0 w-">
       <div class="nav-container pl-5 pr-3 p-0 col-2">
-        <a href="#"><img src="logo.jpeg" height="60px" alt="" /></a>
+        <a href="#"><img src="spotify-logo.png" height="50px" alt="" /></a>
 
         <div id="home" class="nav-list mb-3 mt-4">
           <div class="d-flex align-items-center">
             <iconify-icon icon="ic:baseline-home" width="24"></iconify-icon>
             <span class="home ml-3">Home</span>
+            <a href="#"></a>
           </div>
         </div>
         <div id="search" class="nav-list mb-3">
@@ -31,12 +32,14 @@
               width="24"
             ></iconify-icon>
             <span class="search ml-3">Search</span>
+            <a href="#"></a>
           </div>
         </div>
         <div id="library" class="nav-list mb-5">
           <div class="d-flex align-items-center">
             <iconify-icon icon="bx:library" width="24"></iconify-icon>
             <span class="home ml-3">Your Library</span>
+            <a href="#"></a>
           </div>
         </div>
         <div id="add-playlist" class="nav-list mb-3">
@@ -47,6 +50,7 @@
               width="24"
             ></iconify-icon>
             <span class="home ml-3">Create Playlist</span>
+            <a href="#"></a>
           </div>
         </div>
         <div id="liked-songs" class="nav-list mb-3">
@@ -57,15 +61,18 @@
               width="24"
             ></iconify-icon>
             <span class="home ml-3">Liked Songs</span>
+            <a href="#"></a>
           </div>
         </div>
         <hr />
-        <p class="side-bar-songs">Louis Gadza 2022</p>
-        <p class="side-bar-songs">Louis Gadza Nombulelo Ndebele2022</p>
-        <p class="side-bar-songs">Louis Gadza 2022</p>
-        <p class="side-bar-songs">Louis Gadza 2022</p>
-        <p class="side-bar-songs">Louis Gadza 2022</p>
-        <p class="side-bar-songs">Louis Gadza 2022</p>
+        <p class="side-bar-songs"><a href="#">Louis Gadza 2022</a></p>
+        <p class="side-bar-songs">
+          <a href="#">Louis Gadza Nombulelo Ndebele2022</a>
+        </p>
+        <p class="side-bar-songs"><a href="#">Louis Gadza 2022</a></p>
+        <p class="side-bar-songs"><a href="#">Louis Gadza 2022</a></p>
+        <p class="side-bar-songs"><a href="#">Louis Gadza 2022</a></p>
+        <p class="side-bar-songs"><a href="#">Louis Gadza 2022</a></p>
 
         <!-- nav -->
         <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -131,9 +138,9 @@
         </nav> -->
         <!-- nav -->
       </div>
-      <div class="container w-80 col-10 m-0 p-0">
+      <div class="container col-sm-12 col-md-12 col-lg-10 m-0 p-0">
         <div
-          class="next d-flex align-items-center justify-content-between pt-2 pl-3"
+          class="next col-12 d-flex align-items-center justify-content-between py-2 pl-3"
         >
           <div class="d-flex">
             <div class="next-arrow mr-3">
@@ -164,49 +171,57 @@
             ></span>
           </div>
         </div>
-        <div class="album-cover p-3">
-          <div class="album-cover-info d-flex justify-content-start mt-3">
-            <img
-              src="Zion_(Official_Album_Cover)_by_Hillsong_United.png"
-              alt="Tribal"
-              class="img-fluid image-cover"
-            />
-            <div class="cover-info ml-4 mt-auto">
-              <span>ALBUM</span>
-              <h2>Hillsong United</h2>
-              <div
-                class="song-info d-flex justify-content-end align-items-center"
-              >
-                <img src="tribal.jpeg" alt="" class="album-profile-img" />
-                <span><h6>Queen</h6> </span>
-                <span class="year">. 2018.</span>
-
-                <span class="year">18 songs</span>
-                <span class="year">, 1 hr 30min</span>
-              </div>
-            </div>
-          </div>
+        <div class="go-back d-none show pl-4 pt-3 pb-0 my-0">
+          <iconify-icon icon="ic:baseline-arrow-back" width="30"></iconify-icon>
         </div>
-
+        <div class="album-cover p-3"></div>
         <div class="play-bar">
           <div class="songs p-3">
             <div class="play d-flex justify-content-start align-items-center">
               <div
-                class="play-container d-flex justify-content-center align-items-center"
+                class="hide play-container d-flex justify-content-center align-items-center"
               >
                 <div class="triangle"></div>
               </div>
               <div class="favourate mx-4">
                 <iconify-icon
                   icon="mdi:cards-heart-outline"
-                  width="20"
-                  height="20"
+                  width="25"
+                  height="25"
                 ></iconify-icon>
               </div>
-              <div class="menu-settings mb-3"><h3>...</h3></div>
+              <div class="download d-none show mr-4">
+                <iconify-icon
+                  icon="grommet-icons:download-option"
+                  width="20"
+                ></iconify-icon>
+              </div>
+              <div class="menu-settings mb-3">
+                <h3 class="hide">...</h3>
+                <span class="d-none show pt-3"
+                  ><iconify-icon
+                    icon="mdi:dots-vertical"
+                    width="25"
+                  ></iconify-icon
+                ></span>
+              </div>
+              <div
+                id="shulffle"
+                class="d-none shulffle mr-auto show d-flex justify-content-end ml-5"
+              >
+                <iconify-icon icon="ph:shuffle" width="25"></iconify-icon>
+              </div>
+              <div class="d-none shulffle mr-3 show d-flex justify-content-end">
+                <!-- <div><i class="bi bi-shuffle"></i></div> -->
+                <div
+                  class="play-container d-flex justify-content-center align-items-center"
+                >
+                  <div class="triangle"></div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="songs-list mb-0 pb-0 mx-3">
+          <div id="title" class="songs-list mb-0 pb-0 mx-3">
             <div
               class="songs-list-bar d-flex justify-content-between pr-4 pl-2 mr-4"
             >
@@ -221,156 +236,11 @@
             <hr />
           </div>
         </div>
-        <div class="track pl-4">
-          <div class="d-flex song-bar-options align-items-center pt-4 mr-4">
-            <span>1</span>
-            <div class="d-flex justify-content-between w-100 pr-5">
-              <div class="d-flex flex-column ml-4">
-                <span class="track-name">20th Century Fox</span>
-                <span>Queen</span>
-              </div>
-              <div>
-                <span>3:45</span>
-              </div>
-            </div>
-          </div>
-          <div class="d-flex song-bar-options align-items-center mt-3 mr-4">
-            <span>1</span>
-            <div class="d-flex justify-content-between w-100 pr-5">
-              <div class="d-flex flex-column ml-4">
-                <span class="track-name">20th Century Fox</span>
-                <span>Queen</span>
-              </div>
-              <div>
-                <span>3:45</span>
-              </div>
-            </div>
-          </div>
-          <div class="d-flex song-bar-options align-items-center mt-3 mr-4">
-            <span>1</span>
-            <div class="d-flex justify-content-between w-100 pr-5">
-              <div class="d-flex flex-column ml-4">
-                <span class="track-name">20th Century Fox</span>
-                <span>Queen</span>
-              </div>
-              <div>
-                <span>3:45</span>
-              </div>
-            </div>
-          </div>
-          <div class="d-flex song-bar-options align-items-center mt-3 mr-4">
-            <span>1</span>
-            <div class="d-flex justify-content-between w-100 pr-5">
-              <div class="d-flex flex-column ml-4">
-                <span class="track-name">20th Century Fox</span>
-                <span>Queen</span>
-              </div>
-              <div>
-                <span>3:45</span>
-              </div>
-            </div>
-          </div>
-          <div class="d-flex song-bar-options align-items-center mt-3 mr-4">
-            <span>1</span>
-            <div class="d-flex justify-content-between w-100 pr-5">
-              <div class="d-flex flex-column ml-4">
-                <span class="track-name">20th Century Fox</span>
-                <span>Queen</span>
-              </div>
-              <div>
-                <span>3:45</span>
-              </div>
-            </div>
-          </div>
-          <div class="d-flex song-bar-options align-items-center mt-3 mr-4">
-            <span>1</span>
-            <div class="d-flex justify-content-between w-100 pr-5">
-              <div class="d-flex flex-column ml-4">
-                <span class="track-name">20th Century Fox</span>
-                <span>Queen</span>
-              </div>
-              <div>
-                <span>3:45</span>
-              </div>
-            </div>
-          </div>
-          <div class="d-flex song-bar-options align-items-center mt-3 mr-4">
-            <span>1</span>
-            <div class="d-flex justify-content-between w-100 pr-5">
-              <div class="d-flex flex-column ml-4">
-                <span class="track-name">20th Century Fox</span>
-                <span>Queen</span>
-              </div>
-              <div>
-                <span>3:45</span>
-              </div>
-            </div>
-          </div>
-          <div class="d-flex song-bar-options align-items-center mt-3 mr-4">
-            <span>1</span>
-            <div class="d-flex justify-content-between w-100 pr-5">
-              <div class="d-flex flex-column ml-4">
-                <span class="track-name">20th Century Fox</span>
-                <span>Queen</span>
-              </div>
-              <div>
-                <span>3:45</span>
-              </div>
-            </div>
-          </div>
-          <div class="d-flex song-bar-options align-items-center mt-3 mr-4">
-            <span>1</span>
-            <div class="d-flex justify-content-between w-100 pr-5">
-              <div class="d-flex flex-column ml-4">
-                <span class="track-name">20th Century Fox</span>
-                <span>Queen</span>
-              </div>
-              <div>
-                <span>3:45</span>
-              </div>
-            </div>
-          </div>
-          <div class="d-flex song-bar-options align-items-center mt-3 mr-4">
-            <span>1</span>
-            <div class="d-flex justify-content-between w-100 pr-5">
-              <div class="d-flex flex-column ml-4">
-                <span class="track-name">20th Century Fox</span>
-                <span>Queen</span>
-              </div>
-              <div>
-                <span>3:45</span>
-              </div>
-            </div>
-          </div>
-          <div class="d-flex song-bar-options align-items-center mt-3 mr-4">
-            <span>1</span>
-            <div class="d-flex justify-content-between w-100 pr-5">
-              <div class="d-flex flex-column ml-4">
-                <span class="track-name">20th Century Fox</span>
-                <span>Queen</span>
-              </div>
-              <div>
-                <span>3:45</span>
-              </div>
-            </div>
-          </div>
-          <div class="d-flex song-bar-options align-items-center mt-3 mr-4">
-            <span>1</span>
-            <div class="d-flex justify-content-between w-100 pr-5">
-              <div class="d-flex flex-column ml-4">
-                <span class="track-name">20th Century Fox</span>
-                <span>Queen</span>
-              </div>
-              <div class="d-flex align-items-center">
-                <span>3:45</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="track pl-4 pt-4 mb-5"></div>
       </div>
     </div>
     <div
-      class="playing-bottom-bar px-4 d-flex align-items-center justify-content-between"
+      class="playing-bottom-bar hide px-4 d-flex align-items-center justify-content-between"
     >
       <div class="p-4 d-flex align-items-center">
         <img class="playing-cover" src="tribal.jpeg" alt="" />
@@ -458,5 +328,6 @@
     ></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
     <!-- Script -->
+    <script src="album.js"></script>
   </body>
 </html>

@@ -1,23 +1,58 @@
-.album-cover,
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+body {
+  color: white;
+  background-color: var(--black);
+  font-family: "Signika", sans-serif;
+}
+.album-cover {
+  background-image: linear-gradient(#a13984);
+}
+.cover-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+strong {
+  padding: 5px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.posted-by-artist {
+  margin-top: 0.5em;
+  padding-left: 0.5em;
+}
+.total-songs,
+.duration {
+  font-size: 0.8em;
+}
 .next {
+  background-color: #a13984;
+  z-index: 3;
+  top: 0;
+  right: 0;
+}
+.next-icons {
+  margin-left: 500px;
+}
+.album-cover {
   width: 100%;
   background-blend-mode: multiply;
 }
 .container {
   background-image: linear-gradient(
-    #e0745b 10%,
-    rgb(79, 52, 42) 25%,
-    rgb(32, 30, 30) 40%
+    #a13984,
+    #a13984 0.02%,
+    #a13984 5%,
+    rgb(32, 30, 30) 30%,
+    rgb(32, 30, 30) 100%
   );
   color: white;
   margin-left: 16.5% !important;
-}
-.container {
   width: 100%;
 }
-.image-cover {
-  width: 200px;
-  height: 200px;
+image-cover {
+  width: 250px;
+  height: 300px;
 }
 .album-profile-img {
   width: 30px;
@@ -100,14 +135,10 @@ ul li {
   font-size: 0.8em;
 }
 .track {
-  /* background-color: rgb(62, 60, 60); */
   transform: translateY(-16px);
   font-size: 0.9em;
 }
-.play-bar {
-  /* background-image: linear-gradient(rgb(109, 63, 46), rgb(106, 79, 71)); */
-  background-blend-mode: multiply;
-}
+
 .playing-bottom-bar {
   background-color: black;
   border-top: 1px solid white;
@@ -155,15 +186,93 @@ ul li {
   background-color: gray;
   border-radius: 5px;
   padding-left: 5px;
+  cursor: pointer;
 }
 .side-bar-songs {
   width: 178px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  color: white;
+}
+a {
+  color: white;
 }
 .song-bar-options:hover {
   background-color: grey;
   padding-left: 5px;
   border-radius: 4px;
+}
+.shulffle {
+  display: none !important;
+}
+
+@media screen and (max-width: 806px) {
+  .nav-container {
+    width: 200px;
+    float: left;
+    display: none;
+  }
+  .container {
+    width: 100vw;
+    margin-left: 0 !important;
+  }
+  .next {
+    display: none !important;
+  }
+  .album-cover-info {
+    flex-direction: column;
+  }
+  .album-cover {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  .img-fluid {
+    margin: auto;
+  }
+  .posted-by-artist {
+    order: 1;
+  }
+  .hide {
+    display: none !important;
+  }
+  .show {
+    display: block !important;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  .artist-name {
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+  .song-info {
+    order: 2;
+  }
+  .album-album1 {
+    display: none;
+  }
+  .album-album {
+    order: 3;
+    padding-top: 5px;
+    font-size: 14px;
+    display: block !important;
+  }
+  .year,
+  .total-songs,
+  .duration {
+    display: none;
+  }
+  #title {
+    display: none;
+  }
+  .shulffle {
+    display: block !important;
+  }
+  #shulffle {
+    margin-left: 50% !important;
+    margin-top: 10px;
+  }
+  .go-back {
+    height: 3vh;
+  }
 }
