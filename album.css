@@ -3,6 +3,7 @@ body {
   color: white;
   background-color: var(--black);
   font-family: "Signika", sans-serif;
+  background-color: black;
 }
 .album-cover {
   background-image: linear-gradient(#a13984);
@@ -189,7 +190,7 @@ ul li {
   cursor: pointer;
 }
 .side-bar-songs {
-  width: 178px;
+  width: 140px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -206,11 +207,33 @@ a {
 .shulffle {
   display: none !important;
 }
+@media screen and (max-width: 998px) {
+  .nav-container {
+    width: 161.5px;
+    /* height: 90vh; */
+    display: none;
+  }
+  .container {
+    width: 100vw;
+    margin-left: 0 !important;
+  }
+}
+@media screen and (max-width: 810px) {
+  .nav-container {
+    width: 161.5px;
+    /* height: 90vh; */
+    display: none;
+  }
+  .container {
+    width: 100vw;
+    margin-left: 0 !important;
+  }
+}
 
 @media screen and (max-width: 806px) {
   .nav-container {
-    width: 200px;
-    float: left;
+    /* width: 200px;
+    float: left; */
     display: none;
   }
   .container {
@@ -269,10 +292,22 @@ a {
     display: block !important;
   }
   #shulffle {
-    margin-left: 50% !important;
+    margin-left: 62% !important;
     margin-top: 10px;
   }
   .go-back {
     height: 3vh;
+  }
+}
+@media screen and (max-width: 540px) {
+  #shulffle {
+    margin-left: 40% !important;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 394px) {
+  #shulffle {
+    margin-left: 30% !important;
+    margin-top: 10px;
   }
 }
