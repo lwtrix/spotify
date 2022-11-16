@@ -16,9 +16,10 @@ const fetchData = async (query) => {
     return finalData.data;
 }
 
-const renderPills = (arr) => {
+const renderPills = (arr, amount = 10) => {
 
-    const data = arr.filter(item => arr.indexOf(item) < 10);
+    const data = arr.filter(item => arr.indexOf(item) < amount);
+    pillsRow.innerHTML = '';
 
     for(let item of data) {
         pillsRow.innerHTML += `
@@ -34,23 +35,70 @@ const renderPills = (arr) => {
     }
 }
 
-const renderAlbums = (arr) => {
+const renderAlbums = (arr, mobile = true) => {
+    const seeAllText = document.querySelector('#albumsRow .see-all');
+    const heading = document.querySelector('#albumsRow .see-all');
 
-    const data = arr.filter(item => arr.indexOf(item) < 8);
+    
+    if(mobile === false) {
+        seeAllText.style.display = 'block'
+        const data = arr.filter(item => arr.indexOf(item) < 8);
 
-    for(let item of data) {
-        albumsRow.innerHTML += `
-        <div class="card">
-            <div class="img-container">
-                <img src="${item.album.cover_medium}" alt="">
+        for(let item of data) {
+            albumsRow.innerHTML += `
+            <div class="card">
+                <div class="img-container">
+                    <img src="${item.album.cover_medium}" alt="">
+                </div>
+                <div class="card-details">
+                    <p class="title">${item.album.title}</p>
+                    <a href="artist.html?id=${item.artist.id}" class="artist">${item.artist.name}</a>
+                </div>
             </div>
-            <div class="card-details">
-                <p class="title">${item.album.title}</p>
-                <a href="artist.html?id=${item.artist.id}" class="artist">${item.artist.name}</a>
-            </div>
-        </div>
-    `
+        `
+        } 
+    } else {
+        seeAllText.style.display = 'none'
+        const data = arr.filter(item => arr.indexOf(item) < 1);
+
+        for(let item of data) {
+            albumsRow.innerHTML += `
+            
+                    <div class="wide-card-mobile">
+                        <div class="album-author">
+                            <div class="img-container">
+                                <img src="${item.artist.picture_medium}" />
+                            </div>
+                            <div class="text-container">
+                                <p class="text">New Release from</p>
+                                <p class="author-name">${item.artist.name}</p>
+                            </div>
+                        </div>
+                        <div class="album-details">
+                            <div class="img-container">
+                                <img src="${item.album.cover_medium}" alt="">
+                            </div>
+                            <div class="album-content">
+                                <div class="text-container">
+                                    <p class="title">${item.album.title}</p>
+                                    <a href="artist.html?id=${item.artist.id}" class="artist">${item.artist.name}</a>
+                                </div>
+                                <div class="album-controls">
+                                    <img class="heart-icon" src="./assets/heart.svg" />
+                                    <div class="btn-container">
+                                        <div class="play-btn"></div>
+                                    </div>
+                                    
+                                </div>    
+                            </div>
+                        </div>
+                        
+                    </div>
+            
+        `
+        } 
     }
+    
     
 }
 
@@ -80,5 +128,22 @@ window.addEventListener('load', async () => {
 
     renderPills(pills)
     renderAlbums(albums)
-    renderTracks(tracks)
+    // renderTracks(tracks)
 })
+
+
+window.onresize = () => {
+    let timeoutId = 0;
+    timeoutId = setTimeout(async () => {
+        if(timeoutId) {
+            clearTimeout(timeoutId)
+        }
+
+        const pills = await fetchData('high')
+        if(window.innerWidth < 860) {
+            renderPills(pills, 6)
+        } else if(window.innerWidth > 860) {
+            renderPills(pills, 10)
+        }
+    }, 1000)
+}
