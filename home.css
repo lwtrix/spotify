@@ -403,6 +403,251 @@ body {
     }
 }
 
+@media (min-width: 860px) and (max-width: 1360px) {
+    .container {
+        width: 540px;
+        background-color: #1a1919a8;
+        position: relative;
+        height: 100%;
+        margin-left: 250px;
+        padding-bottom: 120px;
+    }
+
+    .container::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: #1a1919;
+        background-image: linear-gradient(rgba(255, 0, 0, 0.582) 10%, #1a1919a8 30%);
+        z-index: -10;
+        position: absolute;
+        top: 0;
+    }
+
+    .top-nav {
+        margin: 0 25px;
+        padding-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navigation-btns {
+        display: flex;
+    }
+
+    .navigation-btns .previous,
+    .navigation-btns .next {
+        background-color: rgba(0, 0, 0, 0.616);
+        border-radius: 50%;
+        position: relative;
+        width: 10px;
+        height: 10px;
+        margin-right: 20px;
+        padding: 18px;
+    }
+
+    .navigation-btns .previous img,
+    .navigation-btns .next img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        width: 80%;
+        height: auto;
+    }
+
+    .navigation-btns .previous img {
+        left: -10%;
+    }
+
+    .navigation-btns .next img {
+        right: -10%;
+    }
+
+    .account-info {
+        display: flex;
+        align-items: center;
+        width: 150px;
+        background-color: rgba(0, 0, 0, 0.616);
+        border-radius: 20px;
+        padding: 3px 0;
+    }
+
+    .account-info .img-container {
+        width: 25px;
+        position: relative;
+        height: 25px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-left: 2px;
+    }
+
+    .account-info .img-container img {
+        width: 200%;
+        position: absolute;
+        left: -50%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    .account-info .account-name {
+        margin-left: 10px;
+        width: 100px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 14px;
+    }
+
+    .mobile-top-nav {
+        display: none;
+    }
+
+    .mobile-categories-banner {
+        display: none;
+    }
+
+    .welcome-tracks {
+        margin-left: 25px;
+    }
+
+    .welcome-tracks h1 {
+        font-size: 36px;
+        font-weight: 500;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    .welcome-tracks .track-pills {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .welcome-tracks .track-pills .track-pill {
+        display: flex;
+        width: 46.5%;
+        height: 80px;
+        background-color: rgba(255, 255, 255, 0.082);
+        align-items: center;
+        border-radius: 3px;
+        margin-right: 15px;
+        margin-bottom: 7.5px;
+    }
+
+    .track-pills .track-pill .img-container {
+        width: 40%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+
+    .track-pills .track-pill .img-container img {
+        width: 120%;
+        height: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+    }
+
+    .track-pills .track-pill .track-details .text{
+        margin-left: 5px;
+    }
+
+    .tracks-row,
+    .albums-row {
+        margin: 0 25px;
+    }
+
+    .tracks-row .heading,
+    .albums-row .heading {
+        font-weight: 500;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .tracks-row .sub-heading {
+        display: none;
+    }
+
+    .cards-container .see-all {
+        display: none;
+    }
+
+    .cards-container {
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 20px;
+    }
+
+    .cards-container .card {
+        width: 230px;
+        height: fit-content;
+        border-radius: 5px;
+        background-color: #0e0e0e;
+        margin-right: 10px;
+    }
+
+    .cards-container .card .img-container {
+        position: relative;
+        width: 230px;
+    }
+
+    .cards-container .card .img-container img {
+        width: 80%;
+        height: auto;
+        display: block;
+        margin: 20px auto;
+        margin-bottom: 0;
+    }
+
+    .cards-container .card .card-details {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 20px;
+        padding: 20px;
+    }
+
+    .cards-container .card .card-details .title{
+        font-size: 20px;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .cards-container .card .card-details .artist {
+        text-decoration: none;
+        color: #ccc;
+        font-weight: 300;
+    }
+
+    .cards-container::-webkit-scrollbar {
+        height: 10px;
+    }
+
+    .cards-container::-webkit-scrollbar-track {
+        background-color: rgb(15, 15, 15);
+        ;
+        border-radius: 50px;
+    }
+
+    .cards-container::-webkit-scrollbar-thumb {
+        border-radius: 50px;
+        border: 2px solid rgb(15, 15, 15);
+        background-color: #1a1919;
+    }
+}
+
 @media (min-width: 1360px) {
 
     .mobile-top-nav {
