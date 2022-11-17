@@ -281,9 +281,6 @@ table>td>a:hover {
     color: var(--green);
 }
 
-td {
-    width: 200px;
-}
 
 tr span:hover, a:hover{
     color: var(--green);
