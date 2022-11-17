@@ -42,6 +42,8 @@ const renderAlbums = (arr, mobile = true) => {
         const data = arr.filter(item => arr.indexOf(item) < 8);
         albumsRow.innerHTML = '';
 
+        albumsRow.innerHTML += '<span class="see-all">See All</span>'
+
         for(let item of data) {
             albumsRow.innerHTML += `
             <div class="card">

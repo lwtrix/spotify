@@ -1,4 +1,4 @@
- * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,6 +8,7 @@ body {
     background-color: #0e0e0e;
     color: white;
     font-family: Outfit, Roboto;
+    display: flex;
 }
 
 @media (max-width: 860px) {
@@ -21,8 +22,8 @@ body {
     }
 
     .container {
-        margin-left: 14vw;
         width: 90%;
+        margin: 0 auto;
         background-color: #1a1919a8;
     }
     
@@ -275,7 +276,7 @@ body {
 
     .tracks-row {
         padding: 25px 20px;
-        /* margin-top: 25px; */
+        padding-bottom: 120px;
     }
 
     .tracks-row .heading {
@@ -368,7 +369,25 @@ body {
     }
 }
 
-@media (min-width: 861px) {
+@media (min-width: 680px) and (max-width: 860px) {
+    .mobile-top-nav .heading {
+        font-size: 32px;
+    }
+
+    .mobile-categories-banner {
+        font-size: 16px;
+    }
+
+    .wide-card-mobile .album-author {
+        height: 150px;
+    }
+
+    .wide-card-mobile .album-details {
+        height: 200px;
+    }
+}
+
+@media (min-width: 1360px) {
     
     .mobile-top-nav {
         display: none;
@@ -390,250 +409,270 @@ body {
         display: block;
     }
 
-.container {
-    width: 1400px;
-    margin-left: 14vw;
-    background-color: #1a1919a8;
-    position: relative;
-    height: fit-content;
-    padding-bottom: 40px;
+    .container {
+        width: 1100px;
+        background-color: #1a1919a8;
+        position: relative;
+        height: 100%;
+        margin-left: 250px;
+        padding-bottom: 120px;
+    }
+
+    .container::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(rgba(255, 0, 0, 0.582) 10%, #1a1919a8 30%);
+        z-index: -10;
+        position: absolute;
+        top: 0;
+    }
+
+    .top-nav {
+        margin: 0 25px;
+        padding-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navigation-btns {
+        display: flex;
+    }
+
+    .navigation-btns .previous,
+    .navigation-btns .next {
+        background-color: rgba(0, 0, 0, 0.616);
+        border-radius: 50%;
+        position: relative;
+        width: 10px;
+        height: 10px;
+        margin-right: 20px;
+        padding: 18px;
+    }
+
+    .navigation-btns .previous img,
+    .navigation-btns .next img { 
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        width: 80%;
+        height: auto;
+    }
+
+    .navigation-btns .previous img {
+        left: -10%;
+    }
+
+    .navigation-btns .next img {
+        right: -10%;
+    }
+
+    .account-info {
+        display: flex;
+        align-items: center;
+        width: 150px;
+        background-color: rgba(0, 0, 0, 0.616);
+        border-radius: 20px;
+        padding: 3px 0;
+    }
+
+    .account-info .img-container {
+        width: 25px;
+        position: relative;
+        height: 25px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-left: 2px;
+    }
+
+    .account-info .img-container img {
+        width: 200%;
+        position: absolute;
+        left: -50%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    .account-info .account-name {
+        margin-left: 10px;
+        width: 100px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 14px;
+    }
+
+    .welcome-tracks {
+        margin: 0 25px;
+        margin-top: 25px;
+    }
+
+    .welcome-tracks h1 {
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .track-pills {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .track-pill {
+        width: 18.5%;
+        height: 70px;
+        display: flex;
+        background-color: rgba(255, 255, 255, 0.082);
+        align-items: center;
+        border-radius: 3px;
+        margin-right: 15px;
+        margin-bottom: 10px;
+    }
+
+    .track-pill .img-container {
+        width: 30%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+
+    .track-pill .img-container img {
+        width: 115%;
+        height: auto;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .track-pill .track-details .text {
+        padding-left: 15px;
+        font-weight: 500;
+    }
+
+    .albums-row,
+    .tracks-row {
+        margin: 0 25px;
+        margin-top: 35px;
+    }
+
+    .albums-row h2,
+    .tracks-row h2 {
+        font-weight: 700;
+    }
+
+    .tracks-row .sub-heading {
+        color: #ccc;
+        margin-top: 5px;
+    }
+
+    .cards-container {
+        display: flex;
+        padding-top: 15px;
+        position: relative;
+    }
+
+    .cards-container .see-all {
+        position: absolute;
+        top: -10%;
+        right: 1%;
+        text-transform: uppercase;
+        font-size: 12px;
+        color: #ccc;
+        letter-spacing: 1px;
+        cursor: pointer;
+    }
+
+    .card {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 12%;
+        background-color: rgba(119, 119, 119, 0.075);
+        padding: 15px;
+        border-radius: 5px;
+        margin-right: 15px;
+    }
+
+
+
+    .card .img-container {
+        width: 100%;
+        height: 140px;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.589),
+                    -5px -5px 20px rgba(0, 0, 0, 0.589);
+        border-radius: 3px;
+    }
+
+    .card .img-container img {
+        width: 120%;
+        height: auto;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .card .card-details {
+        margin-top: 20px;
+        width: 100%;
+        text-transform: capitalize;
+    }
+
+    .card .card-details .title {
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .card .card-details .artist {
+        margin-top: 5px;
+        display: block;
+        color: #ccc;
+        cursor: pointer;
+        transition: .2s;
+        text-decoration: none;
+    }
+
+    .card .card-details .artist:hover {
+        color: #21cd5d;
+    }
+
 }
 
-.container::after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(rgba(255, 0, 0, 0.582) 10%, #1a1919a8 30%);
-    z-index: -10;
-    position: absolute;
-    top: 0;
+@media (min-width: 1450px) {
+    .container {
+        width: 1200px;
+    }
 }
 
-.top-nav {
-    margin: 0 25px;
-    padding-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+@media (min-width: 1550px) {
+    .container {
+        width: 1300px;
+    }
 }
 
-.navigation-btns {
-    display: flex;
-}
-
-.navigation-btns .previous,
-.navigation-btns .next {
-    background-color: rgba(0, 0, 0, 0.616);
-    border-radius: 50%;
-    position: relative;
-    width: 10px;
-    height: 10px;
-    margin-right: 20px;
-    padding: 18px;
-}
-
-.navigation-btns .previous img,
-.navigation-btns .next img { 
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    width: 80%;
-    height: auto;
-}
-
-.navigation-btns .previous img {
-    left: -10%;
-}
-
-.navigation-btns .next img {
-    right: -10%;
-}
-
-.account-info {
-    display: flex;
-    align-items: center;
-    width: 150px;
-    background-color: rgba(0, 0, 0, 0.616);
-    border-radius: 20px;
-    padding: 3px 0;
-}
-
-.account-info .img-container {
-    width: 25px;
-    position: relative;
-    height: 25px;
-    overflow: hidden;
-    border-radius: 50%;
-    margin-left: 2px;
-}
-
-.account-info .img-container img {
-    width: 200%;
-    position: absolute;
-    left: -50%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-}
-
-.account-info .account-name {
-    margin-left: 10px;
-    width: 100px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 14px;
-}
-
-.welcome-tracks {
-    margin: 0 25px;
-    margin-top: 25px;
-}
-
-.welcome-tracks h1 {
-    font-size: 32px;
-    font-weight: 700;
-}
-
-.track-pills {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-top: 20px;
-}
-
-.track-pill {
-    width: 18.5%;
-    height: 70px;
-    display: flex;
-    background-color: rgba(255, 255, 255, 0.082);
-    align-items: center;
-    border-radius: 3px;
-    margin-right: 20px;
-    margin-bottom: 10px;
-}
-
-.track-pill .img-container {
-    width: 30%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-}
-
-.track-pill .img-container img {
-    width: 115%;
-    height: auto;
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-}
-
-.track-pill .track-details .text {
-    padding-left: 15px;
-    font-weight: 500;
-}
-
-.albums-row,
-.tracks-row {
-    margin: 0 25px;
-    margin-top: 35px;
-}
-
-.albums-row h2,
-.tracks-row h2 {
-    font-weight: 700;
-}
-
-.tracks-row .sub-heading {
-    color: #ccc;
-    margin-top: 5px;
-}
-
-.cards-container {
-    display: flex;
-    padding-top: 15px;
-    position: relative;
-}
-
-.cards-container .see-all {
-    position: absolute;
-    top: -10%;
-    right: 1%;
-    text-transform: uppercase;
-    font-size: 12px;
-    color: #ccc;
-    letter-spacing: 1px;
-    cursor: pointer;
-}
-
-.card {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 12%;
-    background-color: rgba(119, 119, 119, 0.075);
-    padding: 15px;
-    border-radius: 5px;
-    margin-right: 15px;
+@media (min-width: 1650px) {
+    .container {
+        width: 1400px;
+    }
 }
 
 
 
-.card .img-container {
-    width: 100%;
-    height: 140px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.589),
-                -5px -5px 20px rgba(0, 0, 0, 0.589);
-    border-radius: 3px;
-}
-
-.card .img-container img {
-    width: 120%;
-    height: auto;
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-}
-
-.card .card-details {
-    margin-top: 20px;
-    width: 100%;
-    text-transform: capitalize;
-}
-
-.card .card-details .title {
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.card .card-details .artist {
-    margin-top: 5px;
-    display: block;
-    color: #ccc;
-    cursor: pointer;
-    transition: .2s;
-    text-decoration: none;
-}
-
-.card .card-details .artist:hover {
-    color: #21cd5d;
-}
-
-
-}
