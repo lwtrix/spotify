@@ -36,13 +36,11 @@ const renderPills = (arr, amount = 10) => {
 }
 
 const renderAlbums = (arr, mobile = true) => {
-    const seeAllText = document.querySelector('#albumsRow .see-all');
-    const heading = document.querySelector('#albumsRow .see-all');
-
     
     if(mobile === false) {
-        seeAllText.style.display = 'block'
+
         const data = arr.filter(item => arr.indexOf(item) < 8);
+        albumsRow.innerHTML = '';
 
         for(let item of data) {
             albumsRow.innerHTML += `
@@ -58,10 +56,13 @@ const renderAlbums = (arr, mobile = true) => {
         `
         } 
     } else {
-        seeAllText.style.display = 'none'
+
+
+        albumsRow.innerHTML = '';
         const data = arr.filter(item => arr.indexOf(item) < 1);
 
         for(let item of data) {
+            console.log(item)
             albumsRow.innerHTML += `
             
                     <div class="wide-card-mobile">
@@ -121,29 +122,38 @@ const renderTracks = (arr) => {
     }
 }
 
-window.addEventListener('load', async () => {
-    const pills = await fetchData('high')
-    const albums = await fetchData('dark')
-    const tracks = await fetchData('road')
+let timeoutId;
 
-    renderPills(pills)
-    renderAlbums(albums)
-    // renderTracks(tracks)
+const fitScreenSize = () => {
+    
+    if(timeoutId) {
+        clearTimeout(timeoutId)
+    }
+
+    timeoutId = setTimeout(async () => {
+        
+        const pills = await fetchData('high')
+        const albums = await fetchData('rise')
+
+        if(window.innerWidth < 860) {
+            renderPills(pills, 6)
+            renderAlbums(albums, true)
+        } else if(window.innerWidth > 860) {
+            console.log(albums)
+            renderPills(pills, 10)
+            renderAlbums(albums, false)
+        }
+    }, 500)
+}
+
+window.addEventListener('load', async () => {
+    const tracks = await fetchData('back')
+
+    fitScreenSize()
+    renderTracks(tracks)
 })
 
 
 window.onresize = () => {
-    let timeoutId = 0;
-    timeoutId = setTimeout(async () => {
-        if(timeoutId) {
-            clearTimeout(timeoutId)
-        }
-
-        const pills = await fetchData('high')
-        if(window.innerWidth < 860) {
-            renderPills(pills, 6)
-        } else if(window.innerWidth > 860) {
-            renderPills(pills, 10)
-        }
-    }, 1000)
+    fitScreenSize();
 }
