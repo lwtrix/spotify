@@ -1,4 +1,4 @@
-* {
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,6 +9,386 @@ body {
     color: white;
     font-family: Outfit, Roboto;
 }
+
+@media (max-width: 860px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .top-nav {
+        display: none;
+    }
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+        background-color: #1a1919a8;
+    }
+    
+    .mobile-top-nav {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        padding-top: 60px;
+    }
+
+    .mobile-top-nav .heading {
+        font-weight: 500;
+    }
+
+    .mobile-top-nav .menu {
+        display: flex;
+    }
+
+    .mobile-top-nav .menu .icon-container {
+        width: fit-content;
+    }
+
+    .mobile-top-nav .menu .icon-container .icon {
+        margin-left: 25px;
+        width: 28px;
+        display: block;
+    }
+
+    .mobile-top-nav .menu .icon-container.bell {
+        position: relative;
+    }
+
+    .mobile-top-nav .menu .icon-container .circle {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: hsl(213deg 64% 56%);
+        left: 50%;
+        border: 2px solid #1a1919;
+        top: -5%;
+    }
+
+    .mobile-categories-banner {
+        display: flex;
+        width: 100%;
+        margin: 0 20px;
+    }
+
+    .mobile-categories-banner span {
+        margin: 0 23px;
+        margin-top: 35px;
+        font-weight: 300;
+        cursor: pointer;
+    }
+
+    .welcome-tracks {
+        margin-top: 30px;
+    }
+
+    .welcome-tracks h1 {
+        display: none;
+    }
+
+    .track-pills {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 20px;
+    }
+
+    .track-pill {
+        width: 49%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.144);
+        border-radius: 10px;
+        margin-bottom: 5px;
+    }
+
+    .track-pill .img-container {
+        width: 35%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+
+    }
+
+    .track-pill .img-container img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+    }
+
+    .track-pill .track-details .text{
+        margin-left: 10px;
+        font-size: 14px;
+    }
+
+    .albums-row .heading {
+        display: none;
+    }
+
+    .albums-row .cards-container .card {
+        display: none;
+    }
+
+    .wide-card-mobile {
+        margin: 0 20px;
+        margin-top: 15px;
+    }
+
+    .wide-card-mobile .album-author {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100px;
+    }
+
+    .wide-card-mobile .album-author .img-container {
+        position: relative;
+        width: 15%;
+        height: 100%;
+        overflow: hidden;
+        margin-right: 15px;
+    }
+
+    .wide-card-mobile .album-author .img-container img {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        border-radius: 50%;
+    }
+
+    .wide-card-mobile .album-author .text-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .wide-card-mobile .album-author .text-container .text {
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        color: #ccc;
+        transform: translateY(-40%);
+        text-transform: uppercase;
+    }
+
+    .wide-card-mobile .album-author .text-container .author-name {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .wide-card-mobile .album-details {
+        width: 100%;
+        height: 175px;
+        background-color: rgba(255, 255, 255, 0.075);
+        display: flex;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .wide-card-mobile .album-details .img-container {
+        position: relative;
+        width: 40%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .wide-card-mobile .album-details .img-container img{
+        position: absolute;
+        width: 130%;
+        height: auto;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .wide-card-mobile .album-details .album-content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 60%;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .wide-card-mobile .album-details .album-content .text-container {
+        font-size: 16px;
+    }
+
+
+    .wide-card-mobile .album-details .album-content .text-container .artist {
+        text-decoration: none;
+        color: #ccc;
+        font-weight: 300;
+        display: block;
+        margin-top: 5px;
+    }
+
+    .wide-card-mobile .album-details .album-content .album-controls {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .wide-card-mobile .album-details .album-content .album-controls .heart-icon {
+        width: 35px;
+        height: 35px;
+        opacity: 70%;
+    }
+
+    .wide-card-mobile .album-details .album-content .album-controls .btn-container {
+        background-color: rgba(0, 0, 0, 0.294);
+        padding: 5px;
+        position: relative;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+    }
+
+    .wide-card-mobile .album-details .album-content .album-controls .play-btn {
+        width: 14px;
+        height: 14px;
+        border-width: 7px 0px 7px 14px;
+        border-color: transparent transparent transparent #fff;
+        border-style: solid;
+        position: absolute;
+        left: 10%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .tracks-row {
+        padding: 25px 20px;
+        /* margin-top: 25px; */
+    }
+
+    .tracks-row .heading {
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    .tracks-row .sub-heading {
+        display: none;
+    }
+
+    .tracks-row .cards-container .see-all {
+        display: none;
+    }
+
+    .tracks-row .cards-container {
+        display: flex;
+        overflow: auto; 
+    }
+
+    .tracks-row .cards-container .card {
+        margin: 15px 0; 
+        margin-right: 15px;
+        position: relative;
+    }
+
+    .tracks-row .cards-container .card .img-container {
+        border-radius: 15px;
+        overflow: hidden;
+        width: 155px;
+        position: relative;
+    }
+
+    .tracks-row .cards-container .card .img-container::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.178) 0%, rgba(0, 0, 0, 0.883) 60%, rgba(0, 0, 0, 0.966) 80%);
+        z-index: 1;
+    }
+
+    .tracks-row .cards-container .card .card-details {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        z-index: 2;
+        width: 100px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .tracks-row .cards-container .card .card-details .title {
+        width: 100px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .tracks-row .cards-container .card .card-details .artist {
+        text-decoration: none;
+        color: #21cd5da1;
+        font-weight: 300;
+    }
+
+    .tracks-row .cards-container .card .img-container img {
+        width: 120%;
+        transform: translateX(-10%);
+        height: auto;
+    }
+
+    .tracks-row .cards-container::-webkit-scrollbar {
+        height: 10px;
+    }
+
+    .tracks-row .cards-container::-webkit-scrollbar-track {
+        background-color: rgb(15, 15, 15);;
+        border-radius: 50px;
+    }
+
+    .tracks-row .cards-container::-webkit-scrollbar-thumb {
+        border-radius: 50px;
+        border: 2px solid rgb(15, 15, 15);
+        background-color: #1a1919;
+    }
+}
+
+@media (min-width: 861px) {
+    
+    .mobile-top-nav {
+        display: none;
+    }
+
+    .mobile-categories-banner {
+        display: none;
+    }
+
+    .wide-card-mobile {
+        display: none;
+    }
+
+    .albums-row {
+        display: block;
+    }
+
+    .albums-row .heading {
+        display: block;
+    }
 
 .container {
     width: 1400px;
@@ -256,3 +636,4 @@ body {
 }
 
 
+}
