@@ -105,14 +105,6 @@
     margin-bottom: 5px;
 }
 
-.list-container {
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(180deg, rgba(98, 0, 255, 0.1) 5%, rgba(24, 24, 24, 1));
-    overflow-y: auto;
-
-}
-
 
 .media-controls {
     display: flex;

@@ -37,12 +37,20 @@ a:hover {
     color: var(--sand);
 }
 
+.background-con{
+    background-image: linear-gradient(#a13984,
+    #a13984 0.02%,
+    #a13984 5%,
+    rgb(32, 30, 30) 30%,
+    rgb(32, 30, 30) 100%);
+}
 
 .main-container {
     /* margin-left: 245px;
     margin-bottom: 100px; */
     max-width: 1400px;
     margin: 0 auto;
+    background-color: var(--black);
 }
 
 .topbar {
@@ -114,228 +122,12 @@ a:hover {
     margin-left: 20px;
 }
 
-.artist-container {
-    display: flex;
-    flex-direction: column;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0)),
-        url(https://cdn.britannica.com/89/181289-050-427762A2/Thomas-Bangalter-Guy-Manuel-de-Homem-Christo-Daft-Punk-2013.jpg);
-    background-size: cover;
-    background-position-y: 20%;
-    height: 390px;
-    position: relative;
-}
-
-.artist-text-container {
-    color: white;
-    position: absolute;
-    bottom: 0;
-    margin-left: 30px;
-    margin-bottom: 30px;
-}
-
-.artist-text-container h1 {
-    filter: invert(0);
-    mix-blend-mode: difference;
-    font-size: 5em;
-    font-weight: 600;
-}
-
-#verified {
-    line-height: 30px;
-    height: 30px;
-    vertical-align: middle;
-    letter-spacing: 2px;
-}
-
-.music-player {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 90px;
-    z-index: 1;
-    background-color: var(--black);
-    border-top: 1px solid var(--dark-grey)
-}
-
-.album-details {
-    margin: 10px;
-    margin-left: 15px;
-    display: flex;
-    flex-direction: row;
-
-}
-
-.album-text {
-    color: white;
-    font-size: 0.8em;
-    font-weight: 300;
-    margin-top: 10px;
-    line-height: 20px;
-    margin-left: 8px;
-    letter-spacing: 1px;
-}
-
-.album-artwork {
-    width: 60px;
-    height: 60px;
-}
-
-.bar-container {
-    display: flex;
-    line-height: 5px;
-}
-
-#time-remain {
-    margin-right: 10px;
-    font-size: 0.8em;
-}
-
-#time-total {
-    margin-left: 10px;
-    font-size: 0.8em;
-}
-
-.control-buttons {
-    font-size: 2em;
-    margin-bottom: 15px;
-    letter-spacing: 20px;
-}
-
-.player-controls {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.small-btn {
-    font-size: 0.5em;
-}
-
-.music-bar {
-    width: 600px;
-    max-width: 800px;
-    height: 3px;
-    border-radius: 10px;
-    background-color: var(--grey);
-    margin-bottom: 5px;
-}
-
-.list-container {
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(180deg, rgba(98, 0, 255, 0.1) 5%, rgba(24, 24, 24, 1));
-    overflow-y: auto;
-
-}
-
-
-.media-controls {
-    display: flex;
-    color: white;
+#heart{
+    color:rgba(255, 255, 255, 0.4);
     margin-right: 20px;
-    align-items: center;
+    font-size: 1.5em;
 }
 
-input {
-    height: 4px;
-    appearance: none;
-    width: 100%;
-    margin: 2px;
-    border-radius: 8px;
-    transition: 0.2s ease;
-    background-color: #5e5e5e;
-    margin-right: 15px;
-}
-
-input[type="range"]::-webkit-slider-thumb {
-    /* display: none; */
-    width: 5px;
-    height: 5px;
-    border-radius: 100%;
-    background-color: var(--green);
-}
-
-input[type="range"]:hover {
-    background: var(--green);
-}
-
-input[type="range"]::-webkit-slider-thumb:hover {
-    background-color: white;
-}
-
-.list-top-bar {
-    display: flex;
-    flex-direction: row;
-    margin-top: 10px;
-    margin-left: 30px;
-    height: 100px;
-    line-height: 100px;
-    align-items: center;
-}
-
-#green-circle {
-    display: flex;
-    align-items: center;
-    width: 60px;
-    height: 60px;
-    margin: 5px;
-    background-color: var(--green);
-    border-radius: 100%;
-    position: relative;
-    margin-right: 40px;
-}
-
-#green-circle-inner {
-    color: var(--black);
-    font-size: 2em;
-    margin: 0 auto;
-}
-
-/* #green-circle-inner {
-    width: 40px;
-    height: 40px;
-    border-style: solid;
-    border-width: 37px;
-    border-color: #202020;
-    border-style: double;
-    border-width: 0px 39px 0px 39px;
-    border-width: 0px 0px 0px 39px;
-    border-color: #ffffff;
-    margin-left: 20px;
-} */
-
-#green-circle:hover,
-#green-circle-inner:hover {
-    cursor: pointer;
-}
-
-#follow-btn {
-    background: none;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 5px;
-    height: 30px;
-    width: 80px;
-    color: white;
-    margin-right: 30px;
-    font-weight: bold;
-}
-
-#search-bar {
-    height: 35px;
-    width: 100px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 20px;
-    padding: 10px;
-    border: 1px solid white;
-}
-
-#follow-btn:hover {
-    border: 1px solid white;
-}
 
 #dot-btn {
     background: none;
@@ -345,109 +137,75 @@ input[type="range"]::-webkit-slider-thumb:hover {
     font-size: 0.5em;
 }
 
-#dot-btn:hover {
+#dot-btn:hover, #heart:hover {
     color: white;
+    cursor: pointer;
 }
 
 button:hover {
     cursor: pointer;
 }
 
-.list-main {
+.album-container{
     display: flex;
-    flex-direction: row;
-    margin-top: 20px;
-    margin-left: 35px;
-    margin-right: 30px;
+    margin-left: 30px;
 }
 
-.list-list {
-    flex-grow: 2;
+hr{
+    margin-left: 20px;
+    margin-right: 0px;
 }
 
+#album-artwork-top{
+    width: 200px;
+    height: 200px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.6);
+}
 
-
-.right-side {
+.album-info-cont{
     display: flex;
     flex-direction: column;
-    color: white;
-    width: 500px;
-    text-align: left;
+    margin-top: 50px;
+    margin-left: 30px;
+    justify-items: center;
+    line-height: 50px;
 }
 
-.big-spacing {
-    width: 600px;
+.album-info-cont > h1 {
+    font-size: 3em;
 }
 
-#heading-text {
-    margin-bottom: 20px;
+.fa-circle{
+    font-size: 0.5em;
+    line-height: 20px;
+    text-align: center;
 }
 
-table {
-    color: var(--sand);
-    border-spacing: 40px 0px;
+.table{
+    margin-left: 20px;
+    margin-top: 20px;
     padding-bottom: 100px;
 }
 
-table>td>a:hover {
-    color: var(--green);
-}
-
-td {
-    width: 200px;
-}
-
-tr span:hover, a:hover{
-    color: var(--green);
-}
-
-.album-small {
-    width: 50px;
-    height: 50px;
-}
-
-.album-medium {
-    width: 100px;
-    height: 100px;
-}
-
-.artist-pick-con {
+#tags{
+    color: var(--grey);
+    font-size: 0.8em;
     display: flex;
-    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 5px;
 }
 
-.artist-pick-text {
+td{
+    padding: 10px;
+}
+
+#artist-sub{
+    color: var(--grey);
+}
+
+#tags > h3:nth-child(2){
     margin-left: 20px;
 }
-
-.artist-pick-text>h5 {
-    color: var(--grey);
-}
-
-.posted-by {
-    display: flex;
-    flex-direction: row;
-    line-height: 30px;
-}
-
-.posted-by>h6 {
-    color: var(--grey);
-    margin-left: 5px;
-    margin-bottom: 10px;
-}
-
-#circle {
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-    background-image: url(https://i.scdn.co/image/ab6761610000517496d66c60658005885d1135ce);
-    background-size: cover;
-}
-
-
-
-
-
 
 /* media query for small phones */
 @media only screen and (max-width: 600px) {
@@ -556,8 +314,17 @@ tr span:hover, a:hover{
     }
 
     #follow-btn {
-        margin-right: auto;
+        background: none;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 5px;
+        height: 30px;
+        width: 80px;
+        color: white;
+        margin-right: 30px;
+        font-weight: bold;
     }
+
+    
 
 }
 
