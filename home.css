@@ -815,7 +815,7 @@ body {
     color: var(--grey);
 }
 
-.album-details {
+.music-player .album-details {
     margin: 10px;
     margin-left: 15px;
     display: flex;
@@ -823,7 +823,7 @@ body {
 
 }
 
-.album-text {
+.music-player .album-text {
     color: white;
     font-size: 0.8em;
     font-weight: 300;
@@ -833,44 +833,44 @@ body {
     letter-spacing: 1px;
 }
 
-.album-artwork {
+.music-player .album-artwork {
     width: 60px;
     height: 60px;
 }
 
-.bar-container {
+.music-player .bar-container {
     display: flex;
     line-height: 5px;
 }
 
-#time-remain {
+.music-player #time-remain {
     margin-right: 10px;
     font-size: 0.8em;
 }
 
-#time-total {
+.music-player #time-total {
     margin-left: 10px;
     font-size: 0.8em;
 }
 
-.control-buttons {
+.music-player .control-buttons {
     font-size: 2em;
     margin-bottom: 15px;
     letter-spacing: 20px;
 }
 
-.player-controls {
+.music-player .player-controls {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.small-btn {
+.music-player .small-btn {
     font-size: 0.5em;
 }
 
-.music-bar {
+.music-player .music-bar {
     width: 600px;
     max-width: 800px;
     height: 3px;
@@ -880,14 +880,14 @@ body {
 }
 
 
-.media-controls {
+.music-player .media-controls {
     display: flex;
     color: white;
     margin-right: 20px;
     align-items: center;
 }
 
-input {
+.music-player input {
     height: 4px;
     appearance: none;
     width: 100%;
@@ -898,7 +898,7 @@ input {
     margin-right: 15px;
 }
 
-input[type="range"]::-webkit-slider-thumb {
+.music-player input[type="range"]::-webkit-slider-thumb {
     /* display: none; */
     width: 5px;
     height: 5px;
@@ -906,11 +906,11 @@ input[type="range"]::-webkit-slider-thumb {
     background-color: var(--green);
 }
 
-input[type="range"]:hover {
+.music-player input[type="range"]:hover {
     background: var(--green);
 }
 
-input[type="range"]::-webkit-slider-thumb:hover {
+.music-player input[type="range"]::-webkit-slider-thumb:hover {
     background-color: white;
 }
 
@@ -933,19 +933,19 @@ input[type="range"]::-webkit-slider-thumb:hover {
         z-index: 5;
     }
 
-    .album-artwork-mob {
+    .music-player-mobile .album-artwork-mob {
         margin: 10px;
         border-radius: 5px;
     }
 
-    .album-details-mob {
+    .music-player-mobile .album-details-mob {
         color: var(--grey);
         display: flex;
         flex-direction: column;
         margin: 14px 5px;
     }
 
-    .mobile-player-btns {
+    .music-player-mobile .mobile-player-btns {
         font-size: 1.5em;
         line-height: 65px;
         position: fixed;
