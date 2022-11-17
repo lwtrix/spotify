@@ -4,10 +4,17 @@ const albumYear = document.querySelector("year");
 const albumCoverContainer = document.querySelector(".album-cover");
 const albumTotalSongs = document.queryCommandValue(".total-songs");
 const albumDuration = document.querySelector(".duration");
+const albumId = window.location.search.split('?')[1]
+const search = new URLSearchParams(albumId)
+let id = search.get('id')
+
 //try {
+
+
+
 async function getAlbum() {
   const response = await fetch(
-    "https://striveschool-api.herokuapp.com/api/deezer/album/75621062",
+    `https://striveschool-api.herokuapp.com/api/deezer/album/${id}`,
     {
       method: "GET",
     }
@@ -77,7 +84,7 @@ function renderAlbumSongs(album) {
             <div class="d-flex justify-content-between w-100 pr-5">
               <div class="d-flex flex-column ml-4">
                 <span class="track-name">${album.tracks.data[i].title}</span>
-                <span>${album.tracks.data[1].artist.name}</span>
+                <span>${album.tracks.data[i].artist.name}</span>
               </div>
               <div>
                 <span>${mins}:${seconds}</span>

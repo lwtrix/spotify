@@ -47,10 +47,10 @@ const loadTracks = (artistName) => {
 }
 
 
-function searchArtist() {
-    let searchQ = searchBar.value
-    loadTracks(searchQ)
-}
+// function searchArtist() {
+//     let searchQ = searchBar.value
+//     loadTracks(searchQ)
+// }
 
 
 const randomNumber = (min, max) => {
@@ -72,7 +72,6 @@ const display = (artist) => {
 const displayTracks = (tracks) => {
     tracks.forEach((track, index) => {
         let tr = document.createElement("tr")
-        tr.addEventListener("click", togglePlay)
         tr.className = "songs"
         tr.innerHTML = `<td class="audio"><span class="hidden"><i class="bi bi-soundwave"></i></span>${index + 1}</td>
         <td><img src="${track.album.cover_small}"></td>
@@ -96,11 +95,6 @@ function play() {
     }
 }
 
-
-function togglePlay (){
-    let trs = document.getElementsByClassName("audio")
-    
-}
 
 
 window.onload = () => {
