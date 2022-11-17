@@ -76,8 +76,7 @@ function renderAlbumSongs(album) {
     const durationNatural = Number(album.tracks.data[i].duration);
     console.log(durationNatural);
 
-    const mins = parseInt(durationNatural / 60);
-    const seconds = parseInt(durationNatural - mins * 60);
+    let time = defineDuration(durationNatural)
     track.innerHTML += `
     <div class="d-flex song-bar-options align-items-center py-2 mr-4">
             <span class="song-number">${i + 1}</span>
@@ -87,13 +86,18 @@ function renderAlbumSongs(album) {
                 <span>${album.tracks.data[i].artist.name}</span>
               </div>
               <div>
-                <span>${mins}:${seconds}</span>
+                <span>${time}</span>
               </div>
             </div>
           </div>`;
     count++;
   }
   console.log(count);
+}
+
+
+const defineDuration = (t) => {
+  return Math.floor(t / 60) + ':' + ('0' + Math.floor(t % 60)).slice(-2)
 }
 
 window.onload = async () => {
