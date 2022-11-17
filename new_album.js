@@ -69,7 +69,15 @@ function renderAlbumSongs(album) {
   console.log(count);
 }
 
-
+function play() {
+  const playBtn = document.getElementById("green-circle-inner")
+  if (playBtn.innerHTML === `<i class="fa-solid fa-play"></i>` ) {
+      playBtn.innerHTML = `<i class="fa-solid fa-pause"></i>`
+  }
+  else{
+      playBtn.innerHTML = `<i class="fa-solid fa-play"></i>`
+  }
+}
 
 const defineDuration = (t) => {
   return Math.floor(t / 60) + ':' + ('0' + Math.floor(t % 60)).slice(-2)

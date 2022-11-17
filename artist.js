@@ -75,7 +75,7 @@ const displayTracks = (tracks) => {
         tr.className = "songs"
         tr.innerHTML = `<td class="audio"><span class="hidden"><i class="bi bi-soundwave"></i></span>${index + 1}</td>
         <td><img src="${track.album.cover_small}"></td>
-        <td style = "width: 400px"><a href="album.html?id=${track.album.id}">${track.title}</a></td>
+        <td style = "width: 400px"><a href="new_album.html?id=${track.album.id}">${track.title}</a></td>
         <td >${defineDuration(track.duration)}</td>`
         trackList.appendChild(tr)
     })
