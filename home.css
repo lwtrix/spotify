@@ -21,8 +21,8 @@ body {
     }
 
     .container {
+        margin-left: 14vw;
         width: 90%;
-        margin: 0 auto;
         background-color: #1a1919a8;
     }
     
@@ -392,7 +392,7 @@ body {
 
 .container {
     width: 1400px;
-    margin: 0 auto;
+    margin-left: 14vw;
     background-color: #1a1919a8;
     position: relative;
     height: fit-content;

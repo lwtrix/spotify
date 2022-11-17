@@ -42,7 +42,7 @@ a:hover {
     /* margin-left: 245px;
     margin-bottom: 100px; */
     max-width: 1400px;
-    margin: 0 auto;
+    margin-left: 14vw;
 }
 
 .topbar {
@@ -123,6 +123,7 @@ a:hover {
     background-position-y: 20%;
     height: 390px;
     position: relative;
+    z-index: -1;
 }
 
 .artist-text-container {
@@ -411,6 +412,8 @@ tr span:hover, a:hover{
     height: 100px;
 }
 
+
+
 .artist-pick-con {
     display: flex;
     margin-top: 20px;
@@ -453,6 +456,7 @@ tr span:hover, a:hover{
 @media only screen and (max-width: 600px) {
     .artist-container {
         height: 310px;
+
     }
 
     .artist-text-container h1 {
