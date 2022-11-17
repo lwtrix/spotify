@@ -41,8 +41,7 @@ a:hover {
     background-image: linear-gradient(#a13984,
     #a13984 0.02%,
     #a13984 5%,
-    rgb(32, 30, 30) 30%,
-    rgb(32, 30, 30) 100%);
+    var(--black)30%);
 }
 
 .main-container {
@@ -157,7 +156,7 @@ button:hover {
 
 hr{
     margin-left: 20px;
-    margin-right: 0px;
+    margin-right: 20px;
 }
 
 #album-artwork-top{
