@@ -12,8 +12,6 @@
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;500;700&family=Roboto:wght@100;300;500;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="new_album.css">
-    <link rel="stylesheet" href="./sidebar.css">
-    <link rel="stylesheet" href="./player.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <script src="https://kit.fontawesome.com/cce91a75ea.js" crossorigin="anonymous"></script>
     <script src="./new_album.js" defer></script>
@@ -79,9 +77,7 @@
         </div>
     </div>
     </div>
-
-
-
+    
     <div class="music-player-mobile">
         <img class="album-artwork-mob" src="https://upload.wikimedia.org/wikipedia/en/2/27/Daft_Punk_-_Discovery.png">
         <div class="album-details-mob">
@@ -95,6 +91,8 @@
         </div>
     </div>
 
+
+
     <div class="music-player">
         <div class="album-details">
             <img class="album-artwork" src="https://upload.wikimedia.org/wikipedia/en/2/27/Daft_Punk_-_Discovery.png">
@@ -107,7 +105,7 @@
                 <i class="bi bi-pip"></i>
             </div>
         </div>
-
+    
         <div class="player-controls">
             <div class="control-buttons">
                 <i class="bi bi-shuffle" style="font-size: 0.5em;"></i>
@@ -121,8 +119,8 @@
                 <div class="music-bar"></div>
                 <span id="time-total">0:00</span>
             </div>
-        </div>
-
+        </div>  
+    
         <div class="media-controls">
             <i class="bi bi-music-note-list"></i>
             <i class="bi bi-speaker"></i>
@@ -130,61 +128,63 @@
             <input id="volume" type="range">
         </div>
     </div>
+    
 
     <div class="main-container">
-        <div class="background-con">
-            <div class="topbar">
-                <div class="prev-next-buttons">
-                    <button type="button" class="fa fas fa-chevron-left"></button>
-                    <button type="button" class="fa fas fa-chevron-right"></button>
-                </div>
-                <div class="navbar">
-                    <ul>
-                        <!-- <li class="divider">|</li> -->
-                        <li><a href="#">Sign Up</a></li>
-                    </ul>
-                    <button type="button">Log In</button>
-                </div>
+        <div class="topbar">
+            <div class="prev-next-buttons">
+                <button type="button" class="fa fas fa-chevron-left"></button>
+                <button type="button" class="fa fas fa-chevron-right"></button>
             </div>
-
-
-            <div class="album-container">
-                <div class="album-img-cont"><img id="album-artwork-top" src="https://via.placeholder.com/150"></div>
-                <div class="album-info-cont">
-                    <h3>Album</h3>
-                    <h1 id="album-name">Album Name</h2>
-                        <h6><span id="artist-name">By</span><i class="fa-sharp fa-solid fa-circle"></i><span
-                                id="album-year">Year</span> <i class="fa-sharp fa-solid fa-circle"></i><span
-                                id="song-num">#songs</span>, <span id="album-duration">1 hr 19 min</span></h6>
-                </div>
+            <div class="navbar">
+                <ul>
+                    <!-- <li class="divider">|</li> -->
+                    <li><a href="#">Sign Up</a></li>
+                </ul>
+                <button type="button">Log In</button>
             </div>
-            <div class="list-container">
-                <div class="list-top-bar">
-                    <div id="green-circle" onclick="play()">
-                        <div id="green-circle-inner">
-                            <i class="fa-solid fa-pause"></i>
-                        </div>
-                    </div>
-                    <i id="heart" class="bi bi-heart"></i>
-                    <button type="button" id="dot-btn"><i class="fa-solid fa-circle"></i><i
-                            class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i></button>
-                </div>
-            </div>
-            <div id="tags">
-                <h3>#</h3>
-                <h3>Title</h3>
-            </div>
-            <hr>
-            <div class="album-list">
-                <table class="table">
-                    <tbody id="track-list">
-
-                    </tbody>
-                </table>
-            </div>
-
-
         </div>
+
+
+        <div class="album-container">
+            <div class="album-img-cont"><img id="album-artwork-top" src="https://via.placeholder.com/150"></div>
+            <div class="album-info-cont">
+                <h3>Album</h3>
+                <h1 id="album-name">Album Name</h2>
+                    <h6><span id="artist-name">By</span><i class="fa-sharp fa-solid fa-circle"></i><span
+                            id="album-year">Year</span> <i class="fa-sharp fa-solid fa-circle"></i><span
+                            id="song-num">#songs</span>, <span id="album-duration">1 hr 19 min</span></h6>
+            </div>
+        </div>
+        <div class="list-container">
+            <div class="list-top-bar">
+                <div id="green-circle" onclick="play()">
+                    <div id="green-circle-inner">
+                        <i class="fa-solid fa-pause"></i>
+                    </div>
+                </div>
+                <i id="heart" class="bi bi-heart"></i>
+                <button type="button" id="dot-btn"><i class="fa-solid fa-circle"></i><i
+                        class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i></button>
+            </div>
+        </div>
+        <div id="tags">
+            <h3>#</h3>
+            <h3>Title</h3>
+        </div>
+        <hr>
+        <div class="album-list">
+            <table class="table">
+                <tbody id="track-list">
+
+                </tbody>
+            </table>
+        </div>
+
+
+
+
+    </div>
 </body>
 
 </html>

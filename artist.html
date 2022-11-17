@@ -2,201 +2,201 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;500;700&family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="artist.css">
-    <link rel="stylesheet" href="./sidebar.css">
-    <link rel="stylesheet" href="./player.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-    <script src="https://kit.fontawesome.com/cce91a75ea.js" crossorigin="anonymous"></script>
-    <script src="./artist.js" defer></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;500;700&family=Roboto:wght@100;300;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="artist.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  <script src="https://kit.fontawesome.com/cce91a75ea.js" crossorigin="anonymous"></script>
+  <script src="./artist.js" defer></script>
 </head>
 
 <body>
-    
 
-    <div class="sidebar">
-        <img class="logo" src="./spotify-logo.png">
-        <div class="navigation">
-            <ul>
-              <li>
-                <a href="home.html">
-                  <span class="fa fa-home"></span>
-                  <span>Home</span>
-                </a>
-              </li>
-    
-              <li>
-                <a href="#">
-                  <span class="fa fa-search"></span>
-                  <span>Search</span>
-                </a>
-              </li>
-    
-              <li>
-                <a href="#">
-                  <span class="fa fas fa-book"></span>
-                  <span>Your Library</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-    
-          <div class="navigation">
-            <ul>
-              <li>
-                <a href="#">
-                  <span class="fa fas fa-plus-square"></span>
-                  <span>Create Playlist</span>
-                </a>
-              </li>
-    
-              <li>
-                <a href="#">
-                  <span class="fa fas fa-heart"></span>
-                  <span>Liked Songs</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-    
-          <div class="policies">
-            <ul>
-              <li>
-                <a href="#">Cookies</a>
-              </li>
-              <li>
-                <a href="#">Privacy</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+
+  <div class="sidebar">
+    <img class="logo" src="./spotify-logo.png">
+    <div class="navigation">
+      <ul>
+        <li>
+          <a href="home.html">
+            <span class="fa fa-home"></span>
+            <span>Home</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="fa fa-search"></span>
+            <span>Search</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="fa fas fa-book"></span>
+            <span>Your Library</span>
+          </a>
+        </li>
+      </ul>
     </div>
-    
 
-    
-    <div class="music-player-mobile">
-        <img class="album-artwork-mob" src="https://upload.wikimedia.org/wikipedia/en/2/27/Daft_Punk_-_Discovery.png">
-        <div class="album-details-mob">
+    <div class="navigation">
+      <ul>
+        <li>
+          <a href="#">
+            <span class="fa fas fa-plus-square"></span>
+            <span>Create Playlist</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="fa fas fa-heart"></span>
+            <span>Liked Songs</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="policies">
+      <ul>
+        <li>
+          <a href="#">Cookies</a>
+        </li>
+        <li>
+          <a href="#">Privacy</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
+
+
+  <div class="music-player">
+    <div class="album-details">
+        <img class="album-artwork" src="https://upload.wikimedia.org/wikipedia/en/2/27/Daft_Punk_-_Discovery.png">
+        <div class="album-text">
             <h4>One More Time</h4>
             <h5>Daft Punk</h5>
         </div>
-        <div class="mobile-player-btns">
-            <i class="bi bi-speaker"></i>
+        <div class="icons">
             <i class="bi bi-heart"></i>
-            <i class="fa-solid fa-play"></i>
+            <i class="bi bi-pip"></i>
         </div>
     </div>
 
-    <div class="music-player">
-        <div class="album-details">
-            <img class="album-artwork" src="https://upload.wikimedia.org/wikipedia/en/2/27/Daft_Punk_-_Discovery.png">
-            <div class="album-text">
-                <h4>One More Time</h4>
-                <h5>Daft Punk</h5>
-            </div>
-            <div class="icons">
-                <i class="bi bi-heart"></i>
-                <i class="bi bi-pip"></i>
-            </div>
+    <div class="player-controls">
+        <div class="control-buttons">
+            <i class="bi bi-shuffle" style="font-size: 0.5em;"></i>
+            <i class="bi bi-skip-start" style="font-size: 0.6em;"></i>
+            <i class="bi bi-play-fill" style="font-size: 1em;"></i>
+            <i class="bi bi-skip-end" style="font-size: 0.6em;"></i>
+            <i class="bi bi-repeat" style="font-size: 0.6em;"></i>
         </div>
-
-        <div class="player-controls">
-            <div class="control-buttons">
-                <i class="bi bi-shuffle" style="font-size: 0.5em;"></i>
-                <i class="bi bi-skip-start" style="font-size: 0.6em;"></i>
-                <i class="bi bi-play-fill" style="font-size: 1em;"></i>
-                <i class="bi bi-skip-end" style="font-size: 0.6em;"></i>
-                <i class="bi bi-repeat" style="font-size: 0.6em;"></i>
-            </div>
-            <div class="bar-container">
-                <span id="time-remain">0:00</span>
-                <div class="music-bar"></div>
-                <span id="time-total">0:00</span>
-            </div>
-        </div>  
-
-        <div class="media-controls">
-            <i class="bi bi-music-note-list"></i>
-            <i class="bi bi-speaker"></i>
-            <i class="fa-solid fa-volume-high"></i>
-            <input id="volume" type="range">
+        <div class="bar-container">
+            <span id="time-remain">0:00</span>
+            <div class="music-bar"></div>
+            <span id="time-total">0:00</span>
         </div>
+    </div>  
+
+    <div class="media-controls">
+        <i class="bi bi-music-note-list"></i>
+        <i class="bi bi-speaker"></i>
+        <i class="fa-solid fa-volume-high"></i>
+        <input id="volume" type="range">
     </div>
+</div>
+ 
+<div class="music-player-mobile">
+  <img class="album-artwork-mob" src="https://upload.wikimedia.org/wikipedia/en/2/27/Daft_Punk_-_Discovery.png">
+  <div class="album-details-mob">
+      <h4>One More Time</h4>
+      <h5>Daft Punk</h5>
+  </div>
+  <div class="mobile-player-btns">
+      <i class="bi bi-speaker"></i>
+      <i class="bi bi-heart"></i>
+      <i class="fa-solid fa-play"></i>
+  </div>
+</div>
 
-    <div class="main-container">
 
-        <div id="artist-main" class="artist-container">
-            <div class="topbar">
-                <div class="prev-next-buttons">
-                    <button type="button" class="fa fas fa-chevron-left"></button>
-                    <button type="button" class="fa fas fa-chevron-right"></button>
-                </div>
+  <div class="main-container">
 
-                
-
-                <div class="navbar">
-                    <input type="text" id="search-bar" placeholder="search for artists">
-                    <ul>
-                        <!-- <li class="divider">|</li> -->
-                        <li><a href="#">Sign Up</a></li>
-                    </ul>
-                    <button type="button">Log In</button>
-                </div>
-            </div>
-            <div class="artist-text-container">
-                <h5><img id="verified" src="./verified.png"> Verified Artist</h5>
-                <h1 id="artist-name">Daft Punk</h1>
-                <h4 id="listener-num">30,000,000 monthly listeners</h4>
-            </div>
+    <div id="artist-main" class="artist-container">
+      <div class="topbar">
+        <div class="prev-next-buttons">
+          <button type="button" class="fa fas fa-chevron-left"></button>
+          <button type="button" class="fa fas fa-chevron-right"></button>
         </div>
-        <div class="list-container">
-            <div class="list-top-bar">
-                <div id="green-circle" onclick="play()">
-                    <div id="green-circle-inner">
-                        <i class="fa-solid fa-pause"></i>
-                    </div>
-                </div>
-                <button type="button" id="follow-btn">FOLLOW</button>
-                <button type="button" id="dot-btn"><i class="fa-solid fa-circle"></i><i
-                        class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i></button>
-            </div>
-            <div class="list-main">
-                <div class="list-list">
-                    <h2 id="heading-text">Popular</h2>
-                    <table class="table">
-                        <tbody id="track-list">
 
-                        </tbody>
-                    </table>
 
-                    <div class="right-side-mob">
-                        
-                    </div>
-                </div>
-                <div class="right-side">
-                    <h2>Artist Pick</h2>
-                    <div class="artist-pick-con">
-                        <img id="album-small" class="album-artwork album-medium"
-                            src="https://i.scdn.co/image/ab6761610000517496d66c60658005885d1135ce">
-                        <div class="artist-pick-text">
-                            <div class="posted-by">
-                                <div id="circle"></div>
-                                <h6>Posted by <span id="posted-by-artist">Daft Punk</span></h6>
-                            </div>
-                            <h4><span id="artist-name-play">Daft Punk Essentials</span></h4>
-                            <h5>Playlist</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+        <div class="navbar">
+          <input type="text" id="search-bar" placeholder="search for artists">
+          <ul>
+            <!-- <li class="divider">|</li> -->
+            <li><a href="#">Sign Up</a></li>
+          </ul>
+          <button type="button">Log In</button>
         </div>
+      </div>
+      <div class="artist-text-container">
+        <h5><img id="verified" src="./verified.png"> Verified Artist</h5>
+        <h1 id="artist-name">Daft Punk</h1>
+        <h4 id="listener-num">30,000,000 monthly listeners</h4>
+      </div>
     </div>
+    <div class="list-container">
+      <div class="list-top-bar">
+        <div id="green-circle" onclick="play()">
+          <div id="green-circle-inner">
+            <i class="fa-solid fa-pause"></i>
+          </div>
+        </div>
+        <button type="button" id="follow-btn">FOLLOW</button>
+        <button type="button" id="dot-btn"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i
+            class="fa-solid fa-circle"></i></button>
+      </div>
+      <div class="list-main">
+        <div class="list-list">
+          <h2 id="heading-text">Popular</h2>
+          <table class="table">
+            <tbody id="track-list">
+
+            </tbody>
+          </table>
+
+          <div class="right-side-mob">
+
+          </div>
+        </div>
+        <div class="right-side">
+          <h2>Artist Pick</h2>
+          <div class="artist-pick-con">
+            <img id="album-small" class="album-artwork album-medium"
+              src="https://i.scdn.co/image/ab6761610000517496d66c60658005885d1135ce">
+            <div class="artist-pick-text">
+              <div class="posted-by">
+                <div id="circle"></div>
+                <h6>Posted by <span id="posted-by-artist">Daft Punk</span></h6>
+              </div>
+              <h4><span id="artist-name-play">Daft Punk Essentials</span></h4>
+              <h5>Playlist</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
