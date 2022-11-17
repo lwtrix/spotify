@@ -127,6 +127,14 @@ body {
         font-size: 14px;
     }
 
+    .albums-row .heading {
+        display: none;
+    }
+
+    .albums-row .cards-container .card {
+        display: none;
+    }
+
     .wide-card-mobile {
         margin: 0 20px;
         margin-top: 15px;
@@ -360,7 +368,27 @@ body {
     }
 }
 
-/* 
+@media (min-width: 861px) {
+    
+    .mobile-top-nav {
+        display: none;
+    }
+
+    .mobile-categories-banner {
+        display: none;
+    }
+
+    .wide-card-mobile {
+        display: none;
+    }
+
+    .albums-row {
+        display: block;
+    }
+
+    .albums-row .heading {
+        display: block;
+    }
 
 .container {
     width: 1400px;
@@ -607,4 +635,5 @@ body {
     color: #21cd5d;
 }
 
- */
+
+}
