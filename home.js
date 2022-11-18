@@ -1,7 +1,8 @@
 const pillsRow = document.querySelector('#pillsRow');
 const albumsRow = document.querySelector('#albumsRow');
 const tracksRow = document.querySelector('#tracksRow');
-
+const mainHeading = document.querySelector('.welcome-tracks h1');
+const mobileMainHeading = document.querySelector('.mobile-top-nav .heading');
 
 const options = {
     headers: {
@@ -169,6 +170,8 @@ const searchFetch = async (e) => {
         timeoutId = setTimeout(async () => {
             const newPills = await fetchData(e.target.value);
             fetchedData.pills = newPills;
+            mainHeading.innerHTML = `Search results for '${e.target.value}'`
+            mobileMainHeading.innerHTML = `Search results for '${e.target.value}'`
             fitScreenSize()
             }, 500)
     }
