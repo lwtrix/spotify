@@ -380,7 +380,6 @@ tr span:hover, a:hover{
   
   .sidebar .logo {
     width: 200px;
-    
   }
   
   .sidebar .logo img {
@@ -391,11 +390,12 @@ tr span:hover, a:hover{
     margin-top: 20px;
   }
   .sidebar .navigation ul li {
-    padding: 10px 0px;
+    padding: 10px 5px;
+    border-radius: 5px;
   }
 
   .sidebar .navigation ul li:hover {
-    background-color: rgba(255, 255, 255, 0.144);
+        background-color: rgba(255, 255, 255, 0.144);
     }   
 
   .sidebar .navigation ul li a {
