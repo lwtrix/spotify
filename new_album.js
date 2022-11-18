@@ -61,7 +61,7 @@ function renderAlbumSongs(album) {
     let tr = document.createElement("tr")
     let time = defineDuration(durationNatural)       
     tr.innerHTML = `<td class="audio"><span class="hidden"><i class="bi bi-soundwave"></i></span>${i+ 1}</td>
-    <td style = "width: 60vw">${album.tracks.data[i].title} <br> <span id="artist-sub">${album.artist.name}</span></td>
+    <td style = "width: 60vw">${album.tracks.data[i].title} <br> <a href="/artist.html?id=${album.artist.id}"><span id="artist-sub">${album.artist.name}</span></a></td>
     <td >${time}</td>`
     trackList.appendChild(tr)
     count++;
