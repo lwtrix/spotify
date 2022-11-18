@@ -95,7 +95,18 @@ function play() {
     }
 }
 
+const checkpoint = 420
 
+window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset
+    if (currentScroll <= checkpoint) {
+        opacity = 1 - currentScroll / checkpoint
+    }
+    else{
+        opacity = 0;
+    }
+    document.getElementById("artist-main").style.opacity = opacity
+})
 
 window.onload = () => {
     loadArtist(id)
