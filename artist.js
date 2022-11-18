@@ -7,14 +7,15 @@ const smallAlbum = document.getElementById("album-small")
 const trackList = document.getElementById("track-list")
 const listenerNumber = document.getElementById("listener-num")
 let searchBar = document.getElementById("search-bar")
+const searchField = document.querySelector('#searchField')
 const artistId = window.location.search.split('?')[1]
 const search = new URLSearchParams(artistId)
 let id = search.get('id')
 
 
 
-const loadArtist = () => {
-    fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${id}`,
+const loadArtist = (artistId = id) => {
+    fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}`,
     {
         method: "GET",
     })
@@ -58,7 +59,13 @@ const randomNumber = (min, max) => {
 }
 
 const display = (artist) => {
-    console.log(artist)
+    artistNameMain.innerText = ''
+    artistNamePosted.innerText = ''
+    artistNamePlaylist.innerText = 'Best Of'
+    artistContainer.style.backgroundImage = ''
+    artistCircle.style.backgroundImage = ''
+    smallAlbum.src = ''
+
     artistNameMain.innerText = artist.name
     artistNamePosted.innerText = artist.name
     artistNamePlaylist.innerText = "Best of " + artist.name
@@ -70,6 +77,8 @@ const display = (artist) => {
 }
 
 const displayTracks = (tracks) => {
+    trackList.innerHTML = '';
+
     tracks.forEach((track, index) => {
         let tr = document.createElement("tr")
         tr.className = "songs"
@@ -111,3 +120,30 @@ window.addEventListener("scroll", () => {
 window.onload = () => {
     loadArtist(id)
 }
+
+const fetchData = async (query) => {
+    const res = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${query}`);
+    const finalData = await res.json();
+    return finalData.data;
+}
+
+let timeoutId;
+
+const searchFetch = async (e) => {
+
+    if(e.target.value) {
+        if(timeoutId) {
+            clearTimeout(timeoutId)
+        }
+        
+        timeoutId = setTimeout(async () => {
+            const data = await fetchData(e.target.value)
+            const artistId = data[0].artist.id;
+            console.log(artistId)
+            loadArtist(artistId)
+            }, 500)
+    }
+    
+}
+
+searchField.addEventListener('input', searchFetch)

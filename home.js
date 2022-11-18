@@ -64,7 +64,6 @@ const renderAlbums = (arr, mobile = true) => {
         const data = arr.filter(item => arr.indexOf(item) < 1);
 
         for(let item of data) {
-            console.log(item)
             albumsRow.innerHTML += `
             
                     <div class="wide-card-mobile">
@@ -126,15 +125,9 @@ const renderTracks = (arr) => {
 
 let timeoutId;
 const fetchedData = {};
+const searchField = document.querySelector('#searchField')
 
-const fitScreenSize = () => {
-    
-    if(timeoutId) {
-        clearTimeout(timeoutId)
-    }
-
-    timeoutId = setTimeout(async () => {
-        
+const fitScreenSize = () => {    
         if(window.innerWidth < 860) {
             renderPills(fetchedData.pills, 6)
             renderAlbums(fetchedData.albums, true)
@@ -142,7 +135,6 @@ const fitScreenSize = () => {
             renderPills(fetchedData.pills, 10)
             renderAlbums(fetchedData.albums, false)
         }
-    }, 100)
 }
 
 
@@ -157,9 +149,30 @@ window.addEventListener('load', async () => {
 
     fitScreenSize()
     renderTracks(tracks)
+
+    console.log(fetchedData)
+
 })
 
 
 window.onresize = () => {
     fitScreenSize();
 }
+
+const searchFetch = async (e) => {
+
+    if(e.target.value) {
+        if(timeoutId) {
+            clearTimeout(timeoutId)
+        }
+    
+        timeoutId = setTimeout(async () => {
+            const newPills = await fetchData(e.target.value);
+            fetchedData.pills = newPills;
+            fitScreenSize()
+            }, 500)
+    }
+    
+}
+
+searchField.addEventListener('input', searchFetch);
