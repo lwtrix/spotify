@@ -352,6 +352,10 @@ td {
     padding: 10px 0px;
 }
 
+.sidebar .navigation ul li:hover {
+    background-color: rgba(255, 255, 255, 0.144);
+}
+
 .sidebar .navigation ul li a {
     color: #b3b3b3;
     text-decoration: none;
