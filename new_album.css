@@ -88,7 +88,6 @@ a:hover {
     display: flex;
     justify-content: space-between;
     padding: 14px 30px;
-    margin-left: 14vw;
 }
 
 .topbar .prev-next-buttons button {
@@ -538,8 +537,8 @@ input[type="range"]::-webkit-slider-thumb:hover {
     background-color: white;
 }
 
-@media (max-width: 860px){
-    .music-player{
+@media (max-width: 860px) {
+    .music-player {
         display: none;
     }
 
