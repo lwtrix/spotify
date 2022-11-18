@@ -1,0 +1,195 @@
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+hr {
+    width: 100%;
+    color: rgba(197, 197, 197, 0.3);
+}
+
+.logo-con {
+    margin-bottom: 10px;
+}
+
+#logo {
+    width: 200px;
+}
+
+#log-in-text {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.main-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 25vw;
+}
+
+.buttons-con {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#fb,
+#apple,
+#google,
+#sign-up {
+    display: flex;
+    font-size: 1em;
+    width: 20vw;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#fb {
+    background-color: #3b5998;
+}
+
+#apple {
+    background-color: black;
+}
+
+#google {
+    color: grey;
+    background-color: white;
+    border: 1px solid grey;
+}
+
+button>img {
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+input[type=email] {
+    margin-bottom: 20px;
+    height: 50px;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+
+input[type=password] {
+    margin-bottom: 20px;
+    height: 50px;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+#pswd {
+    color: rgb(30, 215, 96);
+    text-decoration: none;
+}
+
+#pswd:hover {
+    text-decoration: underline;
+}
+
+#remember {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+#rem-label {
+    margin-left: 10px;
+}
+
+#log {
+    margin-left: auto;
+}
+
+#log-in {
+    width: 120px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    font-size: 1em;
+    background-color: rgb(30, 215, 96);
+}
+
+#third-hr {
+    margin-top: 20px;
+    color: white;
+    border-top: 1px solid grey;
+}
+
+#account {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    align-items: center;
+}
+
+#sign-up {
+    margin-top: 20px;
+    color: grey;
+    background: white;
+    border: 1px solid grey;
+}
+
+.privacy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin-top: 10px;
+
+}
+
+.privacy>p {
+    color: grey;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.privacy>p>a {
+    text-decoration: none;
+    color: rgb(30, 215, 96);
+}
