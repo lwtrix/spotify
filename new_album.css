@@ -74,6 +74,8 @@ a:hover {
 .main-container {
     /* margin-left: 245px;
     margin-bottom: 100px; */
+    display: flex;
+    flex-direction: column;
     max-width: 1400px;
     margin-left: 13vw;
     background-image: linear-gradient(#a13984,
@@ -183,7 +185,6 @@ button:hover {
 
 .album-list {
     min-height: 50vh;
-    margin-left: 13vw;
 }
 
 hr {
