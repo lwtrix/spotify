@@ -83,6 +83,20 @@ const defineDuration = (t) => {
   return Math.floor(t / 60) + ':' + ('0' + Math.floor(t % 60)).slice(-2)
 }
 
+const checkpoint = 420
+
+window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset
+    if (currentScroll <= checkpoint) {
+        opacity = 1 - (currentScroll / checkpoint) * 1.3
+    }
+    else{
+        opacity = 0;
+    }
+    document.getElementById("album-container").style.opacity = opacity
+    document.getElementById("list-top-bar").style.opacity = opacity
+})
+
 window.onload = async () => {
   const album = await getAlbum();
   renderAlbum(album);

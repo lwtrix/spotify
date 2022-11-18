@@ -100,7 +100,7 @@ const checkpoint = 420
 window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset
     if (currentScroll <= checkpoint) {
-        opacity = 1 - currentScroll / checkpoint
+        opacity = 1 - (currentScroll / checkpoint) * 1.3
     }
     else{
         opacity = 0;
