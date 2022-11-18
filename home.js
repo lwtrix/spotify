@@ -51,7 +51,7 @@ const renderAlbums = (arr, mobile = true) => {
                     <img src="${item.album.cover_medium}" alt="">
                 </div>
                 <div class="card-details">
-                    <p class="title">${item.album.title}</p>
+                    <a class="album-link" href="new_album.html?id=${item.album.id}><p class="title">${item.album.title}</p></a>
                     <a href="artist.html?id=${item.artist.id}" class="artist">${item.artist.name}</a>
                 </div>
             </div>

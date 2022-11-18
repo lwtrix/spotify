@@ -1231,3 +1231,8 @@ body {
     }
 
 }
+
+.album-link{
+    text-decoration: none;
+    color: white;
+}
