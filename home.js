@@ -125,6 +125,7 @@ const renderTracks = (arr) => {
 }
 
 let timeoutId;
+const fetchedData = {};
 
 const fitScreenSize = () => {
     
@@ -134,22 +135,25 @@ const fitScreenSize = () => {
 
     timeoutId = setTimeout(async () => {
         
-        const pills = await fetchData('high')
-        const albums = await fetchData('rise')
-
         if(window.innerWidth < 860) {
-            renderPills(pills, 6)
-            renderAlbums(albums, true)
+            renderPills(fetchedData.pills, 6)
+            renderAlbums(fetchedData.albums, true)
         } else if(window.innerWidth > 860) {
-            console.log(albums)
-            renderPills(pills, 10)
-            renderAlbums(albums, false)
+            renderPills(fetchedData.pills, 10)
+            renderAlbums(fetchedData.albums, false)
         }
-    }, 500)
+    }, 100)
 }
+
 
 window.addEventListener('load', async () => {
     const tracks = await fetchData('back')
+    const pills = await fetchData('high')
+    const albums = await fetchData('rise')
+
+    fetchedData.tracks = tracks;
+    fetchedData.pills = pills;
+    fetchedData.albums = albums;
 
     fitScreenSize()
     renderTracks(tracks)
