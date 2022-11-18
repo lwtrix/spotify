@@ -1148,7 +1148,7 @@ body {
 }
 
 .music-player .music-bar {
-    width: 600px;
+    width: 400px;
     max-width: 800px;
     height: 3px;
     border-radius: 10px;
