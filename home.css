@@ -994,14 +994,35 @@ body {
 }
 
 .sidebar .navigation ul li {
-    padding: 10px 0px;
+    padding: 10px 5px;
+    border-radius: 5px;
+}
+
+.sidebar .navigation ul li:hover {
+    background-color: rgba(255, 255, 255, 0.144);
 }
 
 .sidebar .navigation ul li a {
+    display: flex;
+    align-items: center;
     color: #b3b3b3;
     text-decoration: none;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 14px;
+}
+
+.sidebar .navigation ul li a .search-field {
+    background: none;
+    border: none;
+    width: 150px;
+    font-size: 14px;
+    outline: none;
+    color: white;
+}
+
+.sidebar .navigation ul li a .search-field::placeholder {
+    font-family: Outfit;
+    color: #b3b3b37a;
 }
 
 .sidebar .navigation ul li a:hover,

@@ -74,6 +74,7 @@ a:hover {
 .main-container {
     /* margin-left: 245px;
     margin-bottom: 100px; */
+    padding: 0 25px;
     display: flex;
     flex-direction: column;
     max-width: 1400px;
@@ -92,8 +93,8 @@ a:hover {
 .topbar {
     display: flex;
     justify-content: space-between;
-    padding: 1vw 3vw;
     max-width: 1400px;
+    margin: 20px 0;
 }
 
 .topbar .prev-next-buttons button {
@@ -129,7 +130,9 @@ a:hover {
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
+    display: block;
     letter-spacing: 1px;
+    padding: 14px 0;
 }
 
 .topbar .navbar ul li a:hover,
@@ -186,7 +189,6 @@ button:hover {
 
 .album-container {
     display: flex;
-    margin-left: 5vw;
 }
 
 .album-list {
@@ -355,6 +357,22 @@ td {
     text-decoration: none;
     font-weight: bold;
     font-size: 13px;
+}
+
+.sidebar .navigation ul li a .search-field {
+    background: none;
+    border-radius: 0;
+    border: none;
+    width: 150px;
+    font-size: 14px;
+    outline: none;
+    color: white;
+    height: 20px;
+}
+
+.sidebar .navigation ul li a .search-field::placeholder {
+    font-family: Outfit;
+    color: #b3b3b37a;
 }
 
 .sidebar .navigation ul li a:hover,
@@ -644,7 +662,6 @@ a:hover {
 .topbar {
     display: flex;
     justify-content: space-between;
-    padding: 14px 30px;
 }
 
 .topbar .prev-next-buttons button {

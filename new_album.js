@@ -12,9 +12,9 @@ let id = search.get('id')
 
 
 
-async function getAlbum() {
+async function getAlbum(albumId = id) {
   const response = await fetch(
-    `https://striveschool-api.herokuapp.com/api/deezer/album/${id}`,
+    `https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`,
     {
       method: "GET",
     }
@@ -41,6 +41,13 @@ function renderAlbum(album) {
   let year = date.getFullYear();
   console.log(year);
 
+  albumCover.src = ''
+  albumName.innerText = ''
+  artistName.innerHTML = ''
+  albumYear.innerText = ''
+  albumTotalSongs.innerText = ''
+  albumDuration.innerText = ''
+
   albumCover.src = `${album.cover_medium}`
   albumName.innerText = `${album.title}`
   artistName.innerHTML = `<a href="artist.html?id=${album.artist.id}">` + "By " + `${album.artist.name}` + " " + `</a>`
@@ -54,6 +61,7 @@ function renderAlbumSongs(album) {
   console.log(album.tracks.data.length);
 
   let trackList = document.getElementById("track-list")
+  trackList.innerHTML = ''
 
   let count = 0;
   for (let i = 0; i < album.tracks.data.length; i++) {
@@ -88,6 +96,33 @@ window.onload = async () => {
   renderAlbum(album);
   renderAlbumSongs(album);
 };
-// @media screen and (min-width: 480px){
 
-// }
+
+const fetchData = async (query) => {
+    const res = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${query}`);
+    const finalData = await res.json();
+    return finalData.data;
+}
+
+let timeoutId;
+
+const searchFetch = async (e) => {
+
+    if(e.target.value) {
+        if(timeoutId) {
+            clearTimeout(timeoutId)
+        }
+        
+        timeoutId = setTimeout(async () => {
+            const data = await fetchData(e.target.value)
+            const albumId = data[0].album.id;
+            const album = await getAlbum(albumId)
+
+            renderAlbum(album);
+            renderAlbumSongs(album);
+            }, 500)
+    }
+    
+}
+
+searchField.addEventListener('input', searchFetch)

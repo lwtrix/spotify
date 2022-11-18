@@ -398,7 +398,26 @@ tr span:hover, a:hover{
     text-decoration: none;
     font-weight: bold;
     font-size: 13px;
+    display: flex;
+    align-items: center;
   }
+
+  .sidebar .navigation ul li a .search-field {
+    background: none;
+    border-radius: 0;
+    border: none;
+    width: 150px;
+    font-size: 14px;
+    outline: none;
+    color: white;
+    height: 20px;
+}
+
+.sidebar .navigation ul li a .search-field::placeholder {
+    font-family: Outfit;
+    color: #b3b3b37a;
+}
+
   .sidebar .navigation ul li a:hover,
   .sidebar .navigation ul li a:active,
   .sidebar .navigation ul li a:focus {
