@@ -1,4 +1,4 @@
-body{
+body {
     height: 100%;
     width: 100%;
     font-family: 'Roboto', sans-serif;
@@ -12,7 +12,7 @@ body{
     box-sizing: border-box;
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
@@ -21,25 +21,25 @@ body{
     justify-items: center;
 }
 
-hr{
+hr {
     width: 100%;
     color: rgba(197, 197, 197, 0.3);
 }
 
-.logo-con{
+.logo-con {
     margin-bottom: 10px;
 }
 
-#logo{
+#logo {
     width: 200px;
 }
 
-#log-in-text{
+#log-in-text {
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
-.main-con{
+.main-con {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,20 +47,23 @@ hr{
     width: 25vw;
 }
 
-.buttons-con{
+.buttons-con {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
 }
 
-#fb, #apple, #google, #sign-up{
+#fb,
+#apple,
+#google,
+#sign-up {
     display: flex;
     font-size: 1em;
-    width: 450px;
+    width: 20vw;
     height: 50px;
     margin-bottom: 10px;
     border-radius: 25px;
@@ -70,27 +73,27 @@ button:hover{
     color: white;
 }
 
-#fb{
+#fb {
     background-color: #3b5998;
 }
 
-#apple{
+#apple {
     background-color: black;
 }
 
-#google{
+#google {
     color: grey;
     background-color: white;
     border: 1px solid grey;
 }
 
-button > img {
+button>img {
     width: 40px;
     height: 40px;
     margin-right: 5px;
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
@@ -115,34 +118,34 @@ input[type=password] {
     border: 1px solid grey;
 }
 
-label{
+label {
     margin-bottom: 10px;
 }
 
-#pswd{
+#pswd {
     color: rgb(30, 215, 96);
     text-decoration: none;
 }
 
-#pswd:hover{
+#pswd:hover {
     text-decoration: underline;
 }
 
-#remember{
+#remember {
     margin-top: 20px;
     display: flex;
     flex-direction: row;
 }
 
-#rem-label{
+#rem-label {
     margin-left: 10px;
 }
 
-#log{
+#log {
     margin-left: auto;
 }
 
-#log-in{
+#log-in {
     width: 120px;
     height: 50px;
     border-radius: 25px;
@@ -151,27 +154,27 @@ label{
     background-color: rgb(30, 215, 96);
 }
 
-#third-hr{
+#third-hr {
     margin-top: 20px;
     color: white;
     border-top: 1px solid grey;
 }
 
-#account{
+#account {
     display: flex;
     flex-direction: column;
     margin: 20px auto;
     align-items: center;
 }
 
-#sign-up{
+#sign-up {
     margin-top: 20px;
     color: grey;
     background: white;
     border: 1px solid grey;
 }
 
-.privacy{
+.privacy {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -180,13 +183,13 @@ label{
 
 }
 
-.privacy > p {
+.privacy>p {
     color: grey;
     font-size: 0.8em;
     text-align: center;
 }
 
-.privacy > p > a {
+.privacy>p>a {
     text-decoration: none;
     color: rgb(30, 215, 96);
 }
