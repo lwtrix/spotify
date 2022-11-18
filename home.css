@@ -629,6 +629,11 @@ body {
         text-decoration: none;
         color: #ccc;
         font-weight: 300;
+        transition: .2s;
+    }
+
+    .card .card-details .artist:hover {
+        color: #21cd5d;
     }
 
     .cards-container::-webkit-scrollbar {
@@ -637,7 +642,6 @@ body {
 
     .cards-container::-webkit-scrollbar-track {
         background-color: rgb(15, 15, 15);
-        ;
         border-radius: 50px;
     }
 
@@ -645,6 +649,18 @@ body {
         border-radius: 50px;
         border: 2px solid rgb(15, 15, 15);
         background-color: #1a1919;
+    }
+}
+
+@media (min-width: 980px) {
+    .container {
+        width: 720px;
+    }
+}
+
+@media (min-width: 1120px) {
+    .container {
+        width: 840px;
     }
 }
 
@@ -671,7 +687,7 @@ body {
     }
 
     .container {
-        width: 1100px;
+        width: 1200px;
         background-color: #1a1919a8;
         position: relative;
         height: 100%;
@@ -879,7 +895,7 @@ body {
     }
 
     .card .img-container img {
-        width: 120%;
+        width: 180%;
         height: auto;
         position: absolute;
         left: 0;
@@ -909,6 +925,9 @@ body {
         cursor: pointer;
         transition: .2s;
         text-decoration: none;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .card .card-details .artist:hover {
@@ -921,11 +940,19 @@ body {
     .container {
         width: 1200px;
     }
+
+    .card .img-container img {
+        width: 200%;
+    }
 }
 
 @media (min-width: 1550px) {
     .container {
         width: 1300px;
+    }
+
+    .card .img-container img {
+        width: 130%;
     }
 }
 
@@ -933,6 +960,11 @@ body {
     .container {
         width: 1400px;
     }
+
+    .card .img-container img {
+        width: 120%;
+    }
+
 }
 
 
