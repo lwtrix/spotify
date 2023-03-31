@@ -13,5 +13,5 @@
 ## Contributors
 @cferg97
 
-Not the happiest with the file structure and general organization with this project.
+P.S. Not the happiest with the file structure and general organization with this project.
 However it was my first React project working in a team and it turned out pretty good after all.
